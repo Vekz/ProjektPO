@@ -31,3 +31,5 @@ z tym że tylko 1 z nich zapewnia wystarczającą jakość druku dla albumów.
     * przyjmowanie zleceń zakupu pozycji zmniejszającej stan magazynowy
     * pokazywanie katalogu dostępnych pozycji
 - [ ] zapis i odczyt stanu systemu na dysk
+
+![UML Projektu](/UML.png)
