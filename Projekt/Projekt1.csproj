@@ -55,7 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="DzialHandlowy\Album.cs" />
+    <Compile Include="DzialHandlowy\Czasopismo.cs" />
+    <Compile Include="DzialHandlowy\DzialHandlowy.cs" />
+    <Compile Include="DzialHandlowy\Ksiazka.cs" />
+    <Compile Include="DzialHandlowy\Miesiecznik.cs" />
+    <Compile Include="DzialHandlowy\Produkt.cs" />
+    <Compile Include="DzialHandlowy\Romans.cs" />
+    <Compile Include="DzialHandlowy\Tygodnik.cs" />
+    <Compile Include="Wydawnictwo.cs" />
+    <Page Include="Interfejs UI\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,7 +72,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Interfejs UI\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>

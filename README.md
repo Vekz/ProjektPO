@@ -32,4 +32,4 @@ z tym że tylko 1 z nich zapewnia wystarczającą jakość druku dla albumów.
     * pokazywanie katalogu dostępnych pozycji
 - [ ] zapis i odczyt stanu systemu na dysk
 
-![UML Projektu](/UML.png)
+![UML Projektu](/UML/UML.png)
