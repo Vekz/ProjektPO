@@ -11,10 +11,10 @@ namespace Projekt1
     {
         private List<Produkt> produkty = new List<Produkt>();
 
-        public void ZlecenieZakupu(string tytul, int ilosc)
+        public void ZlecenieZakupu(Produkt P)
         {
 
-            //TODO: Comparison Operators! ^Ta funkcja ma działać na podanym Produkcie
+            //TODO: Porównania żeby odejmować z dobrej książki (może się różnić rok wydania etc.)
             foreach (Produkt e in produkty)
             {
                 if(e.Tytul == tytul)
@@ -25,7 +25,7 @@ namespace Projekt1
             }
         }
 
-        public void ZlecenieDruku()
+        public void ZlecenieDruku(Produkt P)
         {
             //TODO: Wyższe^
         }
@@ -36,15 +36,17 @@ namespace Projekt1
             foreach (Produkt e in produkty)
             {
                 Katalog += e.Tytul + " | ";
-                if (e is Ksiazka)
+                if (e is Ksiazka K)
                 {
-                    Katalog += e.Autor + " | " + e.Rok + " | " + e.Cena;
+                    Katalog += K.Autor + " | " + K.Rok + " | " + K.Cena;
                 }
-                else if(e is Czasopismo)
+                else if(e is Czasopismo Cz)
                 {
-                    Katalog += e.Nr + " | " + e.Cena;
+                    Katalog += Cz.Nr + " | " + Cz.Cena;
                 }
+                Katalog += "/n";
             }
+            return Katalog;
         }
     }
 }
