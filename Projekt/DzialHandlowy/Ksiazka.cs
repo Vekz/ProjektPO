@@ -12,7 +12,7 @@ namespace Projekt1
         public Autor Autor { get; private set; }
         public int Rok { get; private set; }
 
-        public Ksiazka(string autor, string tytul, int rok, int ilosc, double cena) : base(tytul, ilosc, cena)
+        public Ksiazka(Autor autor, string tytul, int rok, int ilosc, double cena) : base(tytul, ilosc, cena)
         {
             Autor = autor;
             Rok = rok;
