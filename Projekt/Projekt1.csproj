@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DzialDruku\DrukarniaAlbumow.cs" />
+    <Compile Include="DzialDruku\Drukarnia.cs" />
+    <Compile Include="DzialDruku\DzialDruku.cs" />
     <Compile Include="DzialHandlowy\Album.cs" />
     <Compile Include="DzialHandlowy\Czasopismo.cs" />
     <Compile Include="DzialHandlowy\DzialHandlowy.cs" />
