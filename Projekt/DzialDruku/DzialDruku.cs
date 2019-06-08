@@ -21,15 +21,20 @@ namespace Projekt1
         public bool ZlecenieDruku(Produkt a)
         {
            if(a is Album)
-            {
-                foreach (DrukarniaAlbumow d in drukarnie) return true;
+           {
+                foreach (Drukarnia d in drukarnie)
+                {
+                    if(d is DrukarniaAlbumow)
+                    {
+                        return true;
+                    }
+                }
                 return false;
-            }
-
+           }
            else
-            {
+           {
                 return true;
-            }
+           }
         }
     }
 }
