@@ -1,33 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projekt1
 {
     [Serializable]
     class DzialHandlowy
     {
+        private Wydawnictwo _wyd = null;
         private List<Produkt> produkty = new List<Produkt>();
 
-        public void ZlecenieZakupu(Produkt P)
+        public DzialHandlowy(Wydawnictwo wyd)
         {
+            _wyd = wyd;
+        }
 
-            //TODO: Porównania żeby odejmować z dobrej książki (może się różnić rok wydania etc.)
+        public void ZlecenieZakupu(Produkt P, int ilosc)
+        {
             foreach (Produkt e in produkty)
             {
-                if(e.Tytul == tytul)
+                if(P == e)
                 {
-                    e.StMag = e.StMag - ilosc;
-                    break;
+                    e.StMag -= ilosc;
                 }
             }
         }
 
-        public void ZlecenieDruku(Produkt P)
+        public void ZlecenieDruku(Produkt P, int ilosc)
         {
-            //TODO: Wyższe^
+            if (produkty.Contains(P))
+            {
+                if (_wyd.DzD.ZlecenieDruku(P))
+                {
+                    P.StMag += ilosc;
+                    return;
+                }
+            }
+            else if (_wyd.DzD.ZlecenieDruku(P))
+            {
+                P.StMag = ilosc;
+                produkty.Add(P);
+            }
+
         }
 
         public String PokazKatalogProduktów()

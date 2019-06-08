@@ -33,7 +33,14 @@ namespace Projekt1
            }
            else
            {
-                return true;
+                foreach (Drukarnia d in drukarnie)
+                {
+                    if(d is Drukarnia)
+                    {
+                        return true;
+                    }
+                }
+                return false;
            }
         }
     }
