@@ -16,7 +16,7 @@ namespace Projekt1
 
         public override string ToString()
         {
-            return Autor + " - '" + Tytul + "' " + " | " + Rok + " : " + StMag + " | " + Cena + "zł";
+            return Autor + " - '" + Tytul + "' " + " | Rok: " + Rok + " | Ilość: " + StMag + " | " + Cena + "zł";
         }
     }
 }

@@ -21,19 +21,20 @@ namespace Projekt1
     /// </summary>
     public partial class MainWindow : Window
     {
-        Wydawnictwo Wyd;
+        private readonly Wydawnictwo Wyd = new Wydawnictwo();
 
         public MainWindow()
         {
             InitializeComponent();
-            Wyd = new Wydawnictwo();
             Wyd.Inicjalizacja();
 
-            Autor Au = new Autor("Artur", "Porowski");
             //TU SIĘ ZACZYNA KOD DO TESTÓW DODAJĄCY PRZYKŁADOWEGO AUTORA I KSIĄŻKI
+            Autor Au = new Autor("Artur", "Porowski");
+            
             Wyd.DzH.ZlecenieDruku(new Ksiazka(Au, "Tak i nie", 2019, 0, 30), 250);
-            Wyd.DzH.ZlecenieDruku(new Ksiazka(Au, "Siabdabamba", 2018, 0, 30), 300);
+            Wyd.DzH.ZlecenieDruku(new Romans(Au, "Siabdabamba", 2018, 0, 30), 300);
             //TU SIĘ KOŃCZY TEN KOD| TODO: INTERFEJS DO DODAWANIA AUTORÓW ETC
+
             Wyd.DzP.DodajAutora(Au);
             lista_ksiazek.ItemsSource = Wyd.DzH.produkty;
             lista_autorow.ItemsSource = Wyd.DzP.autorzy;
@@ -110,37 +111,28 @@ namespace Projekt1
                 Wyd.DzH.ZlecenieDruku(new Czasopismo(tytul.Text, 0, c, numer.Text), i);
 
             }
-            else
-             {
-                 if (rodzaj_k.Text == "Miesięcznik")
-                 {
-                     Wyd.DzH.ZlecenieDruku(new Miesiecznik(tytul.Text, 0, c, numer.Text), i);
+            else if (rodzaj_k.Text == "Miesięcznik")
+            {
+                Wyd.DzH.ZlecenieDruku(new Miesiecznik(tytul.Text, 0, c, numer.Text), i);
 
-                }
-                 else
-                 {
-                     if (rodzaj_k.Text == "Tygodnik")
-                     {
-                         Wyd.DzH.ZlecenieDruku(new Tygodnik(tytul.Text, 0, c, numer.Text), 9);
-                    }
-                     else
-                     {
-                         if (rodzaj_k.Text == "Książka")
-                         {
-                             Wyd.DzH.ZlecenieDruku(new Ksiazka((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
-
-                        }
-                         else
-                         {
-                             if (rodzaj_k.Text == "Romans")
-                             {
-                                 Wyd.DzH.ZlecenieDruku(new Romans((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
-                             }
-                             else Wyd.DzH.ZlecenieDruku(new Album((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
-                         }
-                     }
-                 }
-             }
+            }
+            else if (rodzaj_k.Text == "Tygodnik")
+            {
+                Wyd.DzH.ZlecenieDruku(new Tygodnik(tytul.Text, 0, c, numer.Text), 9);
+            }
+            else if (rodzaj_k.Text == "Książka")
+            {
+                Wyd.DzH.ZlecenieDruku(new Ksiazka((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
+            }
+            else if (rodzaj_k.Text == "Romans")
+            {
+                Wyd.DzH.ZlecenieDruku(new Romans((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
+            }
+            else if (rodzaj_k.Text == "Album")
+            {
+                Wyd.DzH.ZlecenieDruku(new Album((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
+            }
+            else MessageBox.Show("Proszę dodawać rodzaj książki jaki istnieje!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
 
             lista_ksiazek.Items.Refresh();
             lista_ksiazek.Items.Refresh();
@@ -150,7 +142,13 @@ namespace Projekt1
             rok.Text = "";
             tytul.Text = "";
             numer.Text = "";
+
         }
 
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox b = (TextBox)sender;
+            b.Text = "";
+        }
     }
 }
