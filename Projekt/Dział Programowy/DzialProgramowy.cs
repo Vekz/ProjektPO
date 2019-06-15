@@ -32,9 +32,14 @@ namespace Projekt1
             return KatalogAutorow;
         }
 
-        public void ZawrzyjUmowe(Umowa u)
+        public void ZawrzyjUmoweUOD (UOD uod)   //dodać do uml
         {
-            umowy.Add(u);
+            umowy.Add(uod);
+        }
+
+        public void ZawrzyjUmoweUOP (UOP uop)   //dodać do uml
+        {
+            umowy.Add(uop);
         }
 
         public void RozwiazUmowe(Umowa u)
@@ -42,7 +47,7 @@ namespace Projekt1
             umowy.Remove(u);
         }
 
-        public String PrzegladUmow()    //intro pink panther: dodac tę klasę do UML'a
+        public String PrzegladUmow()    //dodac do UML'a
         {
             string KatalogUmow = "";
             foreach (Umowa u in umowy)
