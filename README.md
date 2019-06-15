@@ -21,7 +21,7 @@ z tym że tylko 1 z nich zapewnia wystarczającą jakość druku dla albumów.
     - [ ]  zawieranie umowy o dzieło na konkretną pozycję
     - [ ]  zlecanie w ramach umowy o pracę przygotowania konkretnej pozycji
     - [x]  rozwiązywanie
-    - [ ]  przegląd
+    - [x]  przegląd
 - [x] zarządzanie procesem drukowania:
     - [x]  dział handlowy przygotowuje zlecenie druku i przesyła je do działu programowego
     - [x]  dział programowy wybiera pasującą drukarnię i przesyła jej zlecenie
