@@ -23,6 +23,31 @@ namespace Projekt1
         public MainWindow()
         {
             InitializeComponent();
+
+            
         }
+
+        private void Zamawianie_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Drukowanie_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Usuwanie_a_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Trwa usuwanie, prosze czekac", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            lista_autorow.Items.Remove(lista_autorow.SelectedItem);
+        }
+
+        private void Rozwiązywanie_a_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Trwa usuwanie, prosze czekac", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            lista_umow.Items.Remove(lista_umow.SelectedItem);
+        }
+
     }
 }

@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="400">
     <Grid>
+
+        <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" FontSize= "35" Margin="144,0,126,504" Width="122"><Run Text=" "/><Run Text="Książki"/></TextBlock>
+
+        <ComboBox x:Name="lista_ksiazek" Margin="19,70,194,454"></ComboBox>
+        <Button x:Name="Zamawianie" Content="Zamów" Margin="271,56,29,477" Click="Zamawianie_Click"/>
+        <Button x:Name="Drukowanie" Content="Druk" Margin="271,114,29,418" Click="Drukowanie_Click"/>
+        
+        <TextBlock HorizontalAlignment="Center" Margin="134,216,126,297" TextWrapping="NoWrap" FontSize="35" Width="132"><Run Text=" "/><Run Text="Autorzy"/></TextBlock>
+        <ComboBox x:Name="lista_autorow" Margin="19,277,194,247" SelectionChanged="Lista_autorow_SelectionChanged"></ComboBox>
+        <Button x:Name="Usuwanie_a" Content="Usuń autora" Margin="270,277,29,247" Click="Usuwanie_a_Click" />
+        
+        <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="129,377,126,0" FontSize="35" Width="137"><Run Text=" "/><Run Text="Umowy"/></TextBlock>
+        <ComboBox x:Name="lista_umow" Margin="19,442,194,82"></ComboBox>
+        <Button x:Name="Rozwiązywanie" Content="Rozwiązywanie" Margin="271,442,28,82" Click="Rozwiązywanie_a_Click"/>
         
     </Grid>
+
 </Window>
