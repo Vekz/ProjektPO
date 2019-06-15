@@ -32,9 +32,9 @@ namespace Projekt1
             return KatalogAutorow;
         }
 
-        public void ZawrzyjUmowe()
+        public void ZawrzyjUmowe(Umowa u)
         {
-            //intro pink panther: ogarnąć co tu jest arguemntem a co typem, wtf i czy to ma tylko dodawać do listy umowę
+            umowy.Add(u);
         }
 
         public void RozwiazUmowe(Umowa u)

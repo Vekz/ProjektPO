@@ -150,5 +150,73 @@ namespace Projekt1
             TextBox b = (TextBox)sender;
             b.Text = "";
         }
+
+        private void O_prace_Click(object sender, RoutedEventArgs e)
+        {
+
+            MessageBox.Show("Dodawanie umowy, proszę czekać.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            Autor autor_p = new Autor(imie_p.Text, nazwisko_p.Text);
+            Wyd.DzP.DodajAutora(autor_p);
+
+            lista_autorow.Items.Refresh();
+            lista_autorow.Items.Refresh();
+
+            Wyd.DzP.ZawrzyjUmowe(new UOP(autor_p, Convert.ToDouble(pensja_p.Text), Convert.ToInt32(ilosc_m.Text)));
+
+            lista_umow.Items.Refresh();
+            lista_umow.Items.Refresh();
+
+            imie_p.Text = "";
+            nazwisko_p.Text = "";
+            pensja_p.Text = "";
+            ilosc_m.Text = "";
+        }
+
+        private void O_dzielo_Click(object sender, RoutedEventArgs e)
+        {
+
+            double c = Convert.ToDouble(cena.Text);
+            int r = Convert.ToInt32(rok.Text);
+            int i = Convert.ToInt32(ilosc1.Text);
+
+            MessageBox.Show("Dodawanie umowy, proszę czekać.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            Autor autor_d = new Autor(imie_d.Text, nazwisko_d.Text);
+            Wyd.DzP.DodajAutora(autor_d);
+
+            lista_autorow.Items.Refresh();
+            lista_autorow.Items.Refresh();
+
+            
+            if (rodzaj_k.Text == "Książka")
+            {
+                Wyd.DzH.ZlecenieDruku(new Ksiazka(autor_d, tytul.Text, r, 0, c), i);
+                Wyd.DzP.ZawrzyjUmowe(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Ksiazka(autor_d, tytul.Text, r, i, c)));
+
+            }
+            else if (rodzaj_k.Text == "Romans")
+            {
+                Wyd.DzH.ZlecenieDruku(new Romans(autor_d, tytul.Text, r, 0, c), i);
+                Wyd.DzP.ZawrzyjUmowe(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Romans(autor_d, tytul.Text, r, i, c)));
+            }
+            else if (rodzaj_k.Text == "Album")
+            {
+                Wyd.DzH.ZlecenieDruku(new Album(autor_d, tytul.Text, r, 0, c), i);
+                Wyd.DzP.ZawrzyjUmowe(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Album(autor_d, tytul.Text, r, i, c)));
+            }
+            else MessageBox.Show("Proszę dodawać rodzaj książki jaki istnieje!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            lista_ksiazek.Items.Refresh();
+            lista_ksiazek.Items.Refresh();
+
+            lista_umow.Items.Refresh();
+            lista_umow.Items.Refresh();
+
+            imie_d.Text = "";
+            nazwisko_d.Text = "";
+            pensja_d.Text = "";
+
+        }
     }
 }
