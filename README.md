@@ -12,8 +12,8 @@ Drukowaniem zarządza dział druku - odbywa się to w jednej z 3 własnych druka
 z tym że tylko 1 z nich zapewnia wystarczającą jakość druku dla albumów. 
 
 ## Minimalny zakres funkcjonalności:
-- [ ] zarządzanie autorami:
-    - [ ]  dodawanie
+- [x] zarządzanie autorami:
+    - [x]  dodawanie
     - [x]  usuwanie
     - [x]  przegląd
 - [ ] zarządzanie umowami i pozycjami:
