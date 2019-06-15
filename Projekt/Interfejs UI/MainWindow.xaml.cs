@@ -162,7 +162,7 @@ namespace Projekt1
             lista_autorow.Items.Refresh();
             lista_autorow.Items.Refresh();
 
-            Wyd.DzP.ZawrzyjUmowe(new UOP(autor_p, Convert.ToDouble(pensja_p.Text), Convert.ToInt32(ilosc_m.Text)));
+            Wyd.DzP.ZawrzyjUmoweUOP(new UOP(autor_p, Convert.ToDouble(pensja_p.Text), Convert.ToInt32(ilosc_m.Text)));
 
             lista_umow.Items.Refresh();
             lista_umow.Items.Refresh();
@@ -192,18 +192,18 @@ namespace Projekt1
             if (rodzaj_k.Text == "Książka")
             {
                 Wyd.DzH.ZlecenieDruku(new Ksiazka(autor_d, tytul.Text, r, 0, c), i);
-                Wyd.DzP.ZawrzyjUmowe(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Ksiazka(autor_d, tytul.Text, r, i, c)));
+                Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Ksiazka(autor_d, tytul.Text, r, i, c)));
 
             }
             else if (rodzaj_k.Text == "Romans")
             {
                 Wyd.DzH.ZlecenieDruku(new Romans(autor_d, tytul.Text, r, 0, c), i);
-                Wyd.DzP.ZawrzyjUmowe(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Romans(autor_d, tytul.Text, r, i, c)));
+                Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Romans(autor_d, tytul.Text, r, i, c)));
             }
             else if (rodzaj_k.Text == "Album")
             {
                 Wyd.DzH.ZlecenieDruku(new Album(autor_d, tytul.Text, r, 0, c), i);
-                Wyd.DzP.ZawrzyjUmowe(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Album(autor_d, tytul.Text, r, i, c)));
+                Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Album(autor_d, tytul.Text, r, i, c)));
             }
             else MessageBox.Show("Proszę dodawać rodzaj książki jaki istnieje!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
 

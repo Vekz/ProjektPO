@@ -11,20 +11,17 @@ namespace Projekt1
     {
         public double Pensja { get; private set; }
         public int IloscMsc { get; private set; }
-
         public UOP (Autor autor, double pensja, int iloscMsc) : base(autor)
         {
             Pensja = pensja;
             IloscMsc = iloscMsc;
         }
-
-        /*Sypie błędy wtf
-        public Ksiazka Zlecenie()
+        /*
+        public void Zlecenie(Ksiazka k)    //zmienić na umlu
         {
-            //intro pink panther:  ogarnąć co to ma w sumie robić
+            w.DzH.ZlecenieDruku(k, 0);
         }
         */
-
         public override string ToString()
         {
             return "UOP" + Autor + " " + Pensja + " " + IloscMsc;
