@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt1"
         mc:Ignorable="d"
-        Title="Wydawnictwo" Height="800" Width="400" Loaded="Window_Loaded">
+        Title="Wydawnictwo" Height="800" Width="397.778" Loaded="Window_Loaded">
     <Grid>
 
         <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" FontSize= "35" Margin="129,0,111,504" Width="152"><Run Text=" "/><Run Text="Produkty"/></TextBlock>
 
-        <ComboBox x:Name="lista_ksiazek" Margin="10,56,203,679" IsSynchronizedWithCurrentItem="True"/>
+        <ComboBox x:Name="lista_ksiazek" Margin="10,56,201,679" IsSynchronizedWithCurrentItem="True"/>
         <TextBox x:Name="ilosc" HorizontalAlignment="Left" Height="21" Margin="10,95,0,0" TextWrapping="NoWrap"
                  VerticalAlignment="Top" Width="209" FontSize="11" FontFamily="Verdana" TextAlignment="Center" UndoLimit="100"
                  PreviewTextInput="SprawdzanieInputu" Text="Ilość ksiązek do druku/zamówienia." GotFocus="TextBox_GotFocus"/>
@@ -18,12 +18,12 @@
         <Button x:Name="Drukowanie" Content="Druk" Margin="271,95,34,643" Click="Drukowanie_Click"/>
 
         <TextBlock  HorizontalAlignment="Center" Margin="134,334,126,179" TextWrapping="NoWrap" FontSize="35" Width="132"><Run Text=" "/><Run Text="Autorzy"/></TextBlock>
-        <ComboBox x:Name="lista_autorow" Margin="10,395,203,338" IsSynchronizedWithCurrentItem="True" />
-        <Button x:Name="Usuwanie_a" Content="Usuń autora" Margin="252,395,22,338" Click="Usuwanie_a_Click" />
+        <ComboBox x:Name="lista_autorow" Margin="10,384,201,345" IsSynchronizedWithCurrentItem="True" />
+        <Button x:Name="Usuwanie_a" Content="Usuń autora" Margin="252,384,22,345" Click="Usuwanie_a_Click" />
 
         <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="129,454,126,0" FontSize="35" Width="137"><Run Text=" "/><Run Text="Umowy"/></TextBlock>
-        <ComboBox x:Name="lista_umow" Margin="10,518,203,218" IsSynchronizedWithCurrentItem="True"></ComboBox>
-        <Button x:Name="Rozwiązywanie" Content="Rozwiązywanie" Margin="252,518,34,218" Click="Rozwiązywanie_a_Click"/>
+        <ComboBox x:Name="lista_umow" Margin="10,518,201,212" IsSynchronizedWithCurrentItem="True"></ComboBox>
+        <Button x:Name="Rozwiązywanie" Content="Rozwiązywanie" Margin="252,518,34,212" Click="Rozwiązywanie_a_Click"/>
         <Button x:Name="Dodawanie_a" Content="Dodaj autora" VerticalAlignment="Top" Margin="252,436,22,0" Height="26" Click="Dodawanie_a_Click"/>
         <TextBox x:Name="imie" TextAlignment="Center" HorizontalAlignment="Left" Height="20" Margin="10,436,0,0" TextWrapping="Wrap" Text="Podaj imię" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.618,2" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="nazwisko" TextAlignment="Center" HorizontalAlignment="Left" Height="20" Margin="98,436,0,0" TextWrapping="Wrap" Text="Podaj nazwisko" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.323,0.4" GotFocus="TextBox_GotFocus"/>
@@ -39,7 +39,7 @@
         <TextBox x:Name="cena" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="25" Margin="10,216,0,0" TextWrapping="NoWrap" Text="Podaj cenę." VerticalAlignment="Top" Width="179" UndoLimit="100" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="tytul" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="24" Margin="10,187,0,0" TextWrapping="NoWrap" Text="Podaj tytuł." VerticalAlignment="Top" Width="179" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="ilosc1" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="24" Margin="10,246,0,0" TextWrapping="NoWrap" Text="Podaj ilość książek." VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
-        <TextBox x:Name="rok" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="25" Margin="10,275,0,0" TextWrapping="NoWrap" Text="Podaj rok." VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
+        <TextBox x:Name="rok" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="25" Margin="10,275,0,0" TextWrapping="NoWrap" Text="Podaj rok wydania." VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBlock HorizontalAlignment="Left" Height="23" Margin="209,306,0,0" TextWrapping="Wrap" Text="Autora wybierz z listy poniżej." VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.48,-0.385"/>
         <Button x:Name="dodawanie_k" Content="Dodaj książkę" HorizontalAlignment="Left" Height="30" Margin="252,211,0,0" VerticalAlignment="Top" Width="106" Click="Dodawanie_k_Click"/>
         <TextBox x:Name="numer" TextAlignment="Center" HorizontalAlignment="Left" Height="24" Margin="10,305,0,0" TextWrapping="Wrap" Text="Podaj nr czasopima/mies/tyg" VerticalAlignment="Top" Width="179" GotFocus="TextBox_GotFocus"/>
@@ -53,7 +53,7 @@
         <TextBox x:Name="imie_d" HorizontalAlignment="Left" Height="19" Margin="10,673,0,0" TextWrapping="Wrap" Text="Podaj imię" VerticalAlignment="Top" Width="76" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="nazwisko_d" HorizontalAlignment="Left" Height="19" Margin="91,673,0,0" TextWrapping="Wrap" Text="Podaj nazwisko" VerticalAlignment="Top" Width="91" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="pensja_d" HorizontalAlignment="Left" Height="19" Margin="187,673,0,0" TextWrapping="Wrap" Text="Podaj pensje" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.25,0.772" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="115,697,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="Informacje o książce podaj wyżej"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="109,697,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="Informacje o książce podaj wyżej"/>
         <Button x:Name="o_dzielo" Content="Zawrzyj umowę o dzieło." HorizontalAlignment="Left" Height="26" Margin="67,716,0,0" VerticalAlignment="Top" Width="262" Click="O_dzielo_Click"/>
 
     </Grid>

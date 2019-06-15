@@ -48,7 +48,7 @@ namespace Projekt1
             Wyd.DzH.ZlecenieZakupu((Produkt)lista_ksiazek.SelectedItem, Convert.ToInt32(ilosc.Text));
             lista_ksiazek.Items.Refresh();
             lista_ksiazek.Items.Refresh();
-            ilosc.Text = "";
+            ilosc.Text = "Ilość ksiązek do druku/zamówienia.";
         }
 
         private void Drukowanie_Click(object sender, RoutedEventArgs e)
@@ -57,12 +57,12 @@ namespace Projekt1
             Wyd.DzH.ZlecenieDruku((Produkt)lista_ksiazek.SelectedItem, Convert.ToInt32(ilosc.Text));
             lista_ksiazek.Items.Refresh();
             lista_ksiazek.Items.Refresh();
-            ilosc.Text = "";
+            ilosc.Text = "Ilość ksiązek do druku/zamówienia.";
         }
 
         private void Usuwanie_a_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Trwa usuwanie, proszę czekać.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Autor usunięty poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             Wyd.DzP.UsunAutora((Autor)lista_autorow.SelectedItem);
             lista_autorow.Items.Refresh();
             lista_autorow.Items.Refresh();
@@ -70,7 +70,7 @@ namespace Projekt1
 
         private void Rozwiązywanie_a_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Trwa usuwanie, proszę czekać.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Udało się rozwiązać umowę.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             Wyd.DzP.RozwiazUmowe((Umowa)lista_umow.SelectedItem);
             lista_umow.Items.Refresh();
             lista_umow.Items.Refresh();
@@ -89,13 +89,13 @@ namespace Projekt1
 
         private void Dodawanie_a_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Trwa dodawanie, proszę czekać.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Autor dodany poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             Autor autorzy = new Autor(imie.Text, nazwisko.Text);
             Wyd.DzP.DodajAutora(autorzy);
             lista_autorow.Items.Refresh();
             lista_autorow.Items.Refresh();
-            imie.Text = "";
-            nazwisko.Text = "";
+            imie.Text = "Podaj imię";
+            nazwisko.Text = "Podaj nazwisko";
         }
 
         private void Dodawanie_k_Click(object sender, RoutedEventArgs e)
@@ -104,7 +104,7 @@ namespace Projekt1
             int r = Convert.ToInt32(rok.Text);
             int i = Convert.ToInt32(ilosc1.Text);
 
-            MessageBox.Show("Dodawanie książki, proszę czekać.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Książka podana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
 
             if (rodzaj_k.Text == "Czasopismo")
             {
@@ -137,11 +137,11 @@ namespace Projekt1
             lista_ksiazek.Items.Refresh();
             lista_ksiazek.Items.Refresh();
 
-            cena.Text = "";
-            ilosc1.Text = "";
-            rok.Text = "";
-            tytul.Text = "";
-            numer.Text = "";
+            cena.Text = "Podaj cenę";
+            ilosc1.Text = "Podaj ilość książek";
+            rok.Text = "Podaj rok wydania";
+            tytul.Text = "Podaj tytuł";
+            numer.Text = "Podaj nr czasopisma/tyg/mies";
 
         }
 
@@ -154,7 +154,7 @@ namespace Projekt1
         private void O_prace_Click(object sender, RoutedEventArgs e)
         {
 
-            MessageBox.Show("Dodawanie umowy, proszę czekać.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
 
             Autor autor_p = new Autor(imie_p.Text, nazwisko_p.Text);
             Wyd.DzP.DodajAutora(autor_p);
@@ -167,10 +167,10 @@ namespace Projekt1
             lista_umow.Items.Refresh();
             lista_umow.Items.Refresh();
 
-            imie_p.Text = "";
-            nazwisko_p.Text = "";
-            pensja_p.Text = "";
-            ilosc_m.Text = "";
+            imie_p.Text = "Podaj imię";
+            nazwisko_p.Text = "Podaj nazwisko";
+            pensja_p.Text = "Podaj pensję";
+            ilosc_m.Text = "Ilość miesięcy";
         }
 
         private void O_dzielo_Click(object sender, RoutedEventArgs e)
@@ -180,7 +180,7 @@ namespace Projekt1
             int r = Convert.ToInt32(rok.Text);
             int i = Convert.ToInt32(ilosc1.Text);
 
-            MessageBox.Show("Dodawanie umowy, proszę czekać.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
 
             Autor autor_d = new Autor(imie_d.Text, nazwisko_d.Text);
             Wyd.DzP.DodajAutora(autor_d);
@@ -213,9 +213,14 @@ namespace Projekt1
             lista_umow.Items.Refresh();
             lista_umow.Items.Refresh();
 
-            imie_d.Text = "";
-            nazwisko_d.Text = "";
-            pensja_d.Text = "";
+            imie_d.Text = "Podaj imię";
+            nazwisko_d.Text = "Podaj nazwisko";
+            pensja_d.Text = "Podaj pensję";
+            cena.Text = "Podaj cenę";
+            ilosc1.Text = "Podaj ilość książek";
+            rok.Text = "Podaj rok wydania";
+            tytul.Text = "Podaj tytuł";
+
 
         }
     }
