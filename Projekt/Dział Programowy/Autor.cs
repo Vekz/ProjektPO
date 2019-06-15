@@ -14,8 +14,13 @@ namespace Projekt1
 
         public Autor (string imie, string nazwisko)
         {
-            I*mie = imie;
+            Imie = imie;
             Nazwisko = nazwisko;
+        }
+
+        public override string ToString()
+        {
+            return Imie + " " + Nazwisko;
         }
     }
 }

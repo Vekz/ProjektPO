@@ -17,5 +17,10 @@ namespace Projekt1
             Pensja = pensja;
             Ksiazka = ksiazka;
         }
+
+        public override string ToString()
+        {
+            return "UOD:" + Autor + " " + Pensja + " " + Ksiazka;
+        }
     }
 }

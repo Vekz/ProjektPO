@@ -18,9 +18,16 @@ namespace Projekt1
             IloscMsc = iloscMsc;
         }
 
+        /*Sypie błędy wtf
         public Ksiazka Zlecenie()
         {
             //intro pink panther:  ogarnąć co to ma w sumie robić
+        }
+        */
+
+        public override string ToString()
+        {
+            return "UOP" + Autor + " " + Pensja + " " + IloscMsc;
         }
     }
 }

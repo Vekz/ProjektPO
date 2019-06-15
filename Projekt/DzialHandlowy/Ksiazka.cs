@@ -13,5 +13,10 @@ namespace Projekt1
             Autor = autor;
             Rok = rok;
         }
+
+        public override string ToString()
+        {
+            return Autor + " - '" + Tytul + "' " + " | " + Rok + " : " + StMag + " | " + Cena + "zł";
+        }
     }
 }

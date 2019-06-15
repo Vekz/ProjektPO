@@ -8,5 +8,10 @@ namespace Projekt1
         public string Nr { get; private set; }
 
         public Czasopismo(string tytul, int ilosc, double cena, string numer) : base(tytul, ilosc, cena) => Nr = numer;
+
+        public override string ToString()
+        {
+            return "'" + Tytul + "' " + " | " + Nr + " : " + StMag + " | " + Cena + "zł";
+        }
     }
 }

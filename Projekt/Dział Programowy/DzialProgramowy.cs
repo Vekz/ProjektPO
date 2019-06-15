@@ -9,8 +9,8 @@ namespace Projekt1
     [Serializable]
     class DzialProgramowy
     {
-        private List<Autor> autorzy = new List<Autor>();
-        private List<Umowa> umowy = new List<Umowa>();
+        public List<Autor> autorzy = new List<Autor>();
+        public List<Umowa> umowy = new List<Umowa>();
 
         public void UsunAutora (Autor a)
         {

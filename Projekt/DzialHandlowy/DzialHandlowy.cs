@@ -7,7 +7,7 @@ namespace Projekt1
     class DzialHandlowy
     {
         private Wydawnictwo _wyd = null;
-        private List<Produkt> produkty = new List<Produkt>();
+        public List<Produkt> produkty = new List<Produkt>();
 
         public DzialHandlowy(Wydawnictwo wyd)
         {

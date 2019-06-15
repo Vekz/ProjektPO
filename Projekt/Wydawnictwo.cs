@@ -7,11 +7,17 @@ using System.Threading.Tasks;
 namespace Projekt1
 {
     [Serializable]
-    public class Wydawnictwo
+    class Wydawnictwo
     {
-        public DzialHandlowy DzH = new DzialHandlowy(this);
-        public DzialProgramowy DzP = new DzialProgramowy();
-        public DzialDruku DzD = new DzialDruku();
+        public DzialHandlowy DzH;
+        public DzialProgramowy DzP;
+        public DzialDruku DzD;
 
+        public void Inicjalizacja()
+        {
+            DzH = new DzialHandlowy(this);
+            DzP = new DzialProgramowy();
+            DzD = new DzialDruku();
+        }
     }
 }
