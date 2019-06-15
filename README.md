@@ -17,8 +17,8 @@ z tym że tylko 1 z nich zapewnia wystarczającą jakość druku dla albumów.
     - [x]  usuwanie
     - [x]  przegląd
 - [ ] zarządzanie umowami i pozycjami:
-    - [ ]  zawieranie umowy o pracę
-    - [ ]  zawieranie umowy o dzieło na konkretną pozycję
+    - [x]  zawieranie umowy o pracę
+    - [x]  zawieranie umowy o dzieło na konkretną pozycję
     - [ ]  zlecanie w ramach umowy o pracę przygotowania konkretnej pozycji
     - [x]  rozwiązywanie
     - [x]  przegląd
