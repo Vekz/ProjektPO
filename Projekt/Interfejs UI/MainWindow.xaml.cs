@@ -54,7 +54,7 @@ namespace Projekt1
 
         private void Zamawianie_Click(object sender, RoutedEventArgs e)
         {
-            if (ilosc.Text == "Ilość ksiązek do druku/zamówienia.")
+            if (ilosc.Text == "Ilość ksiązek do druku/zamówienia." || ilosc.Text == "")
             {
                 MessageBox.Show("Podaj poprawną ilość książek.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -70,7 +70,7 @@ namespace Projekt1
 
         private void Drukowanie_Click(object sender, RoutedEventArgs e)
         {
-            if (ilosc.Text == "Ilość ksiązek do druku/zamówienia.")
+            if (ilosc.Text == "Ilość ksiązek do druku/zamówienia." || ilosc.Text == "")
             {
                 MessageBox.Show("Podaj poprawną ilość książek.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -131,7 +131,7 @@ namespace Projekt1
 
         private void Dodawanie_k_Click(object sender, RoutedEventArgs e)
         {
-            if (tytul.Text == "Podaj tytuł" || tytul.Text == "" || cena.Text == "Podaj cenę" || ilosc1.Text == "Podaj ilość książek" || rok.Text == "Podaj rok wydania")
+            if (tytul.Text == "Podaj tytuł" || tytul.Text == "" || cena.Text == "Podaj cenę" || ilosc1.Text == "Podaj ilość książek" || rok.Text == "Podaj rok wydania" || cena.Text == "" || ilosc1.Text == "" || rok.Text == "")
             {
                 MessageBox.Show("Podaj poprawne dane.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -145,7 +145,7 @@ namespace Projekt1
 
                 if (rodzaj_k.Text == "Czasopismo")
                 {
-                    if (numer.Text == "Podaj nr czasopisma/mies/tyg")
+                    if (numer.Text == "Podaj nr czasopisma/mies/tyg" || numer.Text == "")
                     {
                         MessageBox.Show("Podaj poprawny numer.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
@@ -158,7 +158,7 @@ namespace Projekt1
                 }
                 else if (rodzaj_k.Text == "Miesięcznik")
                 {
-                    if (numer.Text == "Podaj nr czasopisma/mies/tyg")
+                    if (numer.Text == "Podaj nr czasopisma/mies/tyg" || numer.Text == "")
                     {
                         MessageBox.Show("Podaj poprawny numer.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
@@ -171,7 +171,7 @@ namespace Projekt1
                     }
                 else if (rodzaj_k.Text == "Tygodnik")
                 {
-                    if (numer.Text == "Podaj nr czasopisma/mies/tyg")
+                    if (numer.Text == "Podaj nr czasopisma/mies/tyg" || numer.Text == "")
                     {
                         MessageBox.Show("Podaj poprawny numer.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
@@ -218,7 +218,7 @@ namespace Projekt1
 
         private void O_prace_Click(object sender, RoutedEventArgs e)
         {
-            if (imie_p.Text == "Podaj imię" || imie_p.Text == "" || nazwisko_p.Text == "Podaj nazwisko" || nazwisko_p.Text == "" || pensja_p.Text == "Podaj pensję" || ilosc_m.Text == "Ilość miesięcy")
+            if (imie_p.Text == "Podaj imię" || imie_p.Text == "" || nazwisko_p.Text == "Podaj nazwisko" || nazwisko_p.Text == "" || pensja_p.Text == "Podaj pensję" || ilosc_m.Text == "Ilość miesięcy" || pensja_p.Text == "" || ilosc_m.Text == "")
             {
                 MessageBox.Show("Podaj poprawne dane.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -247,7 +247,7 @@ namespace Projekt1
 
         private void O_dzielo_Click(object sender, RoutedEventArgs e)
         {
-            if (imie_d.Text == "Podaj imię" || imie_d.Text == "" || nazwisko_d.Text == "Podaj nazwisko" || nazwisko_d.Text == "" || pensja_d.Text == "Podaj pensję" || tytul.Text == "Podaj tytuł" || tytul.Text == "" || cena.Text == "Podaj cenę" || ilosc1.Text == "Podaj ilość książek" || rok.Text == "Podaj rok wydania")
+            if (imie_d.Text == "Podaj imię" || imie_d.Text == "" || nazwisko_d.Text == "Podaj nazwisko" || nazwisko_d.Text == "" || pensja_d.Text == "Podaj pensję" || pensja_d.Text == "" || tytul.Text == "Podaj tytuł" || tytul.Text == "" || cena.Text == "Podaj cenę"  || rok.Text == "Podaj rok wydania" || cena.Text == "" || rok.Text == "")
             {
                 MessageBox.Show("Podaj poprawne dane.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -255,9 +255,6 @@ namespace Projekt1
             {
                 double c = Convert.ToDouble(cena.Text);
                 int r = Convert.ToInt32(rok.Text);
-                int i = Convert.ToInt32(ilosc1.Text);
-
-                MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 Autor autor_d = new Autor(imie_d.Text, nazwisko_d.Text);
                 Wyd.DzP.DodajAutora(autor_d);
@@ -268,19 +265,22 @@ namespace Projekt1
 
                 if (rodzaj_k.Text == "Książka")
                 {
-                    Wyd.DzH.ZlecenieDruku(new Ksiazka(autor_d, tytul.Text, r, 0, c), i);
-                    Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Ksiazka(autor_d, tytul.Text, r, i, c)));
+                    Wyd.DzH.ZlecenieDruku(new Ksiazka(autor_d, tytul.Text, r, 0, c), 0);
+                    Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Ksiazka(autor_d, tytul.Text, r, 0, c)));
+                    MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 }
                 else if (rodzaj_k.Text == "Romans")
                 {
-                    Wyd.DzH.ZlecenieDruku(new Romans(autor_d, tytul.Text, r, 0, c), i);
-                    Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Romans(autor_d, tytul.Text, r, i, c)));
+                    Wyd.DzH.ZlecenieDruku(new Romans(autor_d, tytul.Text, r, 0, c), 0);
+                    Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Romans(autor_d, tytul.Text, r, 0, c)));
+                    MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else if (rodzaj_k.Text == "Album")
                 {
-                    Wyd.DzH.ZlecenieDruku(new Album(autor_d, tytul.Text, r, 0, c), i);
-                    Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Album(autor_d, tytul.Text, r, i, c)));
+                    Wyd.DzH.ZlecenieDruku(new Album(autor_d, tytul.Text, r, 0, c), 0);
+                    Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Album(autor_d, tytul.Text, r, 0, c)));
+                    MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else MessageBox.Show("Proszę dodawać rodzaj książki jaki istnieje!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -327,6 +327,65 @@ namespace Projekt1
                 stream.Close();
             }
             Inicjuj();
+        }
+
+        private void O_prace_p_Click(object sender, RoutedEventArgs e)
+        {
+            if (imie_p.Text == "Podaj imię" || imie_p.Text == "" || nazwisko_p.Text == "Podaj nazwisko" || nazwisko_p.Text == "" || pensja_p.Text == "Podaj pensję" || pensja_p.Text == "" || ilosc_m.Text == "Ilość miesięcy" || ilosc_m.Text == "" || tytul.Text == "" || tytul.Text == "Podaj tytuł" || cena.Text == "Podaj cenę" || cena.Text == "" || rok.Text == "Podaj rok wydania" || rok.Text == "")
+            {
+                MessageBox.Show("Podaj poprawne dane.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                double c = Convert.ToDouble(cena.Text);
+                int r = Convert.ToInt32(rok.Text);
+
+
+                Autor autor_p = new Autor(imie_p.Text, nazwisko_p.Text);
+                Wyd.DzP.DodajAutora(autor_p);
+
+                UOP oP = new UOP(autor_p, Convert.ToDouble(pensja_p.Text), Convert.ToInt32(ilosc_m.Text), Wyd);
+                Wyd.DzP.ZawrzyjUmoweUOP(oP);
+
+                lista_autorow.Items.Refresh();
+                lista_autorow.Items.Refresh();
+
+                if (rodzaj_k.Text == "Książka")
+                {
+                    oP.Zlecenie(new Ksiazka(autor_p, tytul.Text, r, 0, c));
+                    MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                }
+                else if (rodzaj_k.Text == "Romans")
+                {
+                    oP.Zlecenie(new Romans(autor_p, tytul.Text, r, 0, c));
+                    MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else if (rodzaj_k.Text == "Album")
+                {
+                    oP.Zlecenie(new Album(autor_p, tytul.Text, r, 0, c));
+                    MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else MessageBox.Show("Proszę dodawać rodzaj książki jaki istnieje!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
+
+
+
+                lista_umow.Items.Refresh();
+                lista_umow.Items.Refresh();
+
+                lista_ksiazek.Items.Refresh();
+                lista_ksiazek.Items.Refresh();
+
+                imie_p.Text = "Podaj imię";
+                nazwisko_p.Text = "Podaj nazwisko";
+                pensja_p.Text = "Podaj pensję";
+                ilosc_m.Text = "Ilość miesięcy";
+                cena.Text = "Podaj cenę";
+                ilosc1.Text = "Podaj ilość książek";
+                rok.Text = "Podaj rok wydania";
+                tytul.Text = "Podaj tytuł";
+            }
+
         }
     }
 }

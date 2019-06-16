@@ -48,15 +48,17 @@
         <TextBox x:Name="nazwisko_p" HorizontalAlignment="Left" Height="19" Margin="91,585,0,0" TextWrapping="Wrap" Text="Podaj nazwisko" VerticalAlignment="Top" Width="91" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="pensja_p" HorizontalAlignment="Left" Height="19" Margin="187,585,0,0" TextWrapping="Wrap" Text="Podaj pensje" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.25,0.772" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="ilosc_m" HorizontalAlignment="Left" Height="19" Margin="280,585,0,0" TextWrapping="Wrap" Text="Ilość miesięcy" VerticalAlignment="Top" Width="95" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
-        <Button x:Name="o_prace" Content="Zawrzyj umowę o pracę." HorizontalAlignment="Left" Height="26" Margin="67,609,0,0" VerticalAlignment="Top" Width="262" Click="O_prace_Click"/>
+        <Button x:Name="o_prace" Content="Zawrzyj umowę o pracę." HorizontalAlignment="Left" Height="26" Margin="10,609,0,0" VerticalAlignment="Top" Width="152" Click="O_prace_Click"/>
         <TextBlock HorizontalAlignment="Left" Height="19" Margin="10,649,0,0" TextWrapping="Wrap" Text="Zawieranie umowy o dzieło" VerticalAlignment="Top" Width="172"/>
         <TextBox x:Name="imie_d" HorizontalAlignment="Left" Height="19" Margin="10,673,0,0" TextWrapping="Wrap" Text="Podaj imię" VerticalAlignment="Top" Width="76" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="nazwisko_d" HorizontalAlignment="Left" Height="19" Margin="91,673,0,0" TextWrapping="Wrap" Text="Podaj nazwisko" VerticalAlignment="Top" Width="91" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="pensja_d" HorizontalAlignment="Left" Height="19" Margin="187,673,0,0" TextWrapping="Wrap" Text="Podaj pensje" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.25,0.772" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="109,697,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="Informacje o książce podaj wyżej"/>
+        <TextBlock HorizontalAlignment="Left" Height="14" Margin="135,702,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Text="Informacje o książce podaj wyżej" FontSize="10"/>
         <Button x:Name="o_dzielo" Content="Zawrzyj umowę o dzieło." HorizontalAlignment="Left" Height="26" Margin="67,716,0,0" VerticalAlignment="Top" Width="262" Click="O_dzielo_Click"/>
         <Button x:Name="ZapiszBtn" Content="Zapisz" HorizontalAlignment="Left" Height="31" Margin="265,10,0,0" VerticalAlignment="Top" Width="54" Click="Zapisz"/>
         <Button x:Name="WczytajBtn" Content="Wczytaj" HorizontalAlignment="Left" Height="31" Margin="324,10,0,0" VerticalAlignment="Top" Width="58" Click="Wczytaj"/>
+        <Button x:Name="o_prace_p" Content="Umowa o pracę na konkretną pozycję." HorizontalAlignment="Left" Height="26" Margin="167,609,0,0" VerticalAlignment="Top" Width="215" Click="O_prace_p_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="203,635,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Text="Informacje o książce podaj wyżej" FontSize="10"/>
 
     </Grid>
 

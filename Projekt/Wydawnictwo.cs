@@ -16,7 +16,7 @@ namespace Projekt1
         public void Inicjalizacja()
         {
             DzH = new DzialHandlowy(this);
-            DzP = new DzialProgramowy(this);
+            DzP = new DzialProgramowy();
             DzD = new DzialDruku();
         }
     }
