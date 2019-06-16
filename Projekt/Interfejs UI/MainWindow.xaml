@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt1"
         mc:Ignorable="d"
-        Title="Wydawnictwo" Height="800" Width="397.778" Loaded="Window_Loaded">
+        Title="Wydawnictwo" Height="800" Width="397.778" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
 
-        <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" FontSize= "35" Margin="129,0,111,504" Width="152"><Run Text=" "/><Run Text="Produkty"/></TextBlock>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" FontSize= "35" Margin="128,0,105,697" Width="157"><Run Text=" "/><Run Text="Produkty"/></TextBlock>
 
         <ComboBox x:Name="lista_ksiazek" Margin="10,56,201,679" IsSynchronizedWithCurrentItem="True"/>
         <TextBox x:Name="ilosc" HorizontalAlignment="Left" Height="21" Margin="10,95,0,0" TextWrapping="NoWrap"
@@ -17,7 +17,7 @@
         <Button x:Name="Zamawianie" Content="Zamów" Margin="271,56,34,679" Click="Zamawianie_Click"/>
         <Button x:Name="Drukowanie" Content="Druk" Margin="271,95,34,643" Click="Drukowanie_Click"/>
 
-        <TextBlock  HorizontalAlignment="Center" Margin="134,334,126,179" TextWrapping="NoWrap" FontSize="35" Width="132"><Run Text=" "/><Run Text="Autorzy"/></TextBlock>
+        <TextBlock  HorizontalAlignment="Center" Margin="133,334,115,366" TextWrapping="NoWrap" FontSize="35" Width="142"><Run Text=" "/><Run Text="Autorzy"/></TextBlock>
         <ComboBox x:Name="lista_autorow" Margin="10,384,201,345" IsSynchronizedWithCurrentItem="True" />
         <Button x:Name="Usuwanie_a" Content="Usuń autora" Margin="252,384,22,345" Click="Usuwanie_a_Click" />
 
