@@ -16,10 +16,10 @@ z tym że tylko 1 z nich zapewnia wystarczającą jakość druku dla albumów.
     - [x]  dodawanie
     - [x]  usuwanie
     - [x]  przegląd
-- [ ] zarządzanie umowami i pozycjami:
+- [x] zarządzanie umowami i pozycjami:
     - [x]  zawieranie umowy o pracę
     - [x]  zawieranie umowy o dzieło na konkretną pozycję
-    - [ ]  zlecanie w ramach umowy o pracę przygotowania konkretnej pozycji
+    - [x]  zlecanie w ramach umowy o pracę przygotowania konkretnej pozycji
     - [x]  rozwiązywanie
     - [x]  przegląd
 - [x] zarządzanie procesem drukowania:
