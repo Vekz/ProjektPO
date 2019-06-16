@@ -36,7 +36,7 @@
             <TextBlock>Tygodnik</TextBlock>
             <TextBlock>Miesięcznik</TextBlock>
         </ComboBox>
-        <TextBox x:Name="cena" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="25" Margin="10,216,0,0" TextWrapping="NoWrap" Text="Podaj cenę." VerticalAlignment="Top" Width="179" UndoLimit="100" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
+        <TextBox x:Name="cena" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="25" Margin="10,216,0,0" TextWrapping="NoWrap" Text="Podaj cenę." VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="tytul" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="24" Margin="10,187,0,0" TextWrapping="NoWrap" Text="Podaj tytuł." VerticalAlignment="Top" Width="179" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="ilosc1" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="24" Margin="10,246,0,0" TextWrapping="NoWrap" Text="Podaj ilość książek." VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="rok" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="25" Margin="10,275,0,0" TextWrapping="NoWrap" Text="Podaj rok wydania." VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>

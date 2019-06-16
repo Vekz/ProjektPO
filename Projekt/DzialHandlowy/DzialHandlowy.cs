@@ -6,7 +6,8 @@ namespace Projekt1
     [Serializable]
     class DzialHandlowy
     {
-        private readonly Wydawnictwo _wyd = null;
+
+        [NonSerialized] public Wydawnictwo _wyd = null;
         public List<Produkt> produkty = new List<Produkt>();
 
         public DzialHandlowy(Wydawnictwo wyd)

@@ -29,13 +29,12 @@ namespace Projekt1
         public MainWindow()
         {
             InitializeComponent();
+            Wyd.Inicjalizacja();
             Inicjuj();
         }
 
         private void Inicjuj()
         {
-            Wyd.Inicjalizacja();
-
             /*
             //TU SIĘ ZACZYNA KOD DO TESTÓW DODAJĄCY PRZYKŁADOWEGO AUTORA I KSIĄŻKI
             Autor Au = new Autor("Artur", "Porowski");
@@ -235,7 +234,7 @@ namespace Projekt1
 
         private void Zapisz(object sender, RoutedEventArgs e)
         {
-            using (Stream stream = File.Open("data.bin", FileMode.Create, FileAccess.Write))
+            using (Stream stream = File.Open("data.dat", FileMode.Create, FileAccess.Write))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
 
@@ -244,20 +243,22 @@ namespace Projekt1
             }
             Wyd = null;
             Wyd = new Wydawnictwo();
+            Wyd.Inicjalizacja();
             Inicjuj();
         }
 
         private void Wczytaj(object sender, RoutedEventArgs e)
         {
-            using (Stream stream = File.Open("data.bin", FileMode.Open, FileAccess.Read))
+            using (Stream stream = File.Open("data.dat", FileMode.Open, FileAccess.Read))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
 
+                Wyd = null;
                 Wyd = (Wydawnictwo)formatter.Deserialize(stream);
+                Wyd.DzH._wyd = Wyd;
                 stream.Close();
             }
-            Inicjuj(); //NIE WIEM CZEMU NIE DZIAĄŁ ALE ZAPISUJE CHYBA
-
+            Inicjuj();
         }
     }
 }
