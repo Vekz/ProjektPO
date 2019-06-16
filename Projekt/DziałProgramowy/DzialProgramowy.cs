@@ -11,7 +11,7 @@ namespace Projekt1
     {
         public List<Autor> autorzy = new List<Autor>();
         public List<Umowa> umowy = new List<Umowa>();
-        
+
         public void UsunAutora (Autor a)
         {
             autorzy.Remove(a);

@@ -232,7 +232,7 @@ namespace Projekt1
                 lista_autorow.Items.Refresh();
                 lista_autorow.Items.Refresh();
 
-                Wyd.DzP.ZawrzyjUmoweUOP(new UOP(autor_p, Convert.ToDouble(pensja_p.Text), Convert.ToInt32(ilosc_m.Text)));
+                Wyd.DzP.ZawrzyjUmoweUOP(new UOP(autor_p, Convert.ToDouble(pensja_p.Text), Convert.ToInt32(ilosc_m.Text), Wyd));
 
                 lista_umow.Items.Refresh();
                 lista_umow.Items.Refresh();

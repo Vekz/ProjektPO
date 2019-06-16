@@ -20,7 +20,7 @@ namespace Projekt1
 
         public override string ToString()
         {
-            return "UOD:" + Autor + " " + Pensja + " " + Ksiazka;
+            return "UOD: " + Autor + " | Pensja: " + Pensja + " | " + Ksiazka;
         }
     }
 }

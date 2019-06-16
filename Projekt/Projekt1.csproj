@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Dział Programowy\Autor.cs" />
+    <Compile Include="DziałProgramowy\Autor.cs" />
     <Compile Include="DzialDruku\DrukarniaAlbumow.cs" />
     <Compile Include="DzialDruku\Drukarnia.cs" />
     <Compile Include="DzialDruku\DzialDruku.cs" />
@@ -67,10 +67,10 @@
     <Compile Include="DzialHandlowy\Produkt.cs" />
     <Compile Include="DzialHandlowy\Romans.cs" />
     <Compile Include="DzialHandlowy\Tygodnik.cs" />
-    <Compile Include="Dział Programowy\DzialProgramowy.cs" />
-    <Compile Include="Dział Programowy\Umowa.cs" />
-    <Compile Include="Dział Programowy\UOD.cs" />
-    <Compile Include="Dział Programowy\UOP.cs" />
+    <Compile Include="DziałProgramowy\DzialProgramowy.cs" />
+    <Compile Include="DziałProgramowy\Umowa.cs" />
+    <Compile Include="DziałProgramowy\UOD.cs" />
+    <Compile Include="DziałProgramowy\UOP.cs" />
     <Compile Include="Wydawnictwo.cs" />
     <Page Include="Interfejs UI\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -10,9 +10,9 @@ namespace Projekt1
         [NonSerialized] public Wydawnictwo _wyd = null;
         public List<Produkt> produkty = new List<Produkt>();
 
-        public DzialHandlowy(Wydawnictwo wyd)
+        public DzialHandlowy(Wydawnictwo Wyd)
         {
-            _wyd = wyd;
+            _wyd = Wyd;
         }
 
         public void ZlecenieZakupu(Produkt P, int ilosc)
