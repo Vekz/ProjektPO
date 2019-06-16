@@ -30,6 +30,6 @@ z tym że tylko 1 z nich zapewnia wystarczającą jakość druku dla albumów.
 - [x] bardzo prosty sklep prowadzony przez dział handlowy:
     - [x]  przyjmowanie zleceń zakupu pozycji zmniejszającej stan magazynowy
     - [x]  pokazywanie katalogu dostępnych pozycji
-- [ ] zapis i odczyt stanu systemu na dysk
+- [x] zapis i odczyt stanu systemu na dysk
 
 ![UML Projektu](/UML/UML.png)
