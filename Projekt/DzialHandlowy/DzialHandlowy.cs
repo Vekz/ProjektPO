@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Projekt1
 {
+    /// <summary>
+    /// Dział zajmujący się zlecaniem sprzedaży i druku, przetrzymuje listę produktów
+    /// </summary>
     [Serializable]
     class DzialHandlowy
     {
@@ -10,18 +13,34 @@ namespace Projekt1
         [NonSerialized] public Wydawnictwo _wyd = null;
         public List<Produkt> produkty = new List<Produkt>();
 
+        /// <summary>
+        /// Tworzy obiekt Działu Handlowego
+        /// </summary>
+        /// <param name="Wyd"> Obiekt rodzica - Wydawnictwa, aby mieć dostęp do metod innych działów </param>
         public DzialHandlowy(Wydawnictwo Wyd)
         {
             _wyd = Wyd;
         }
 
+        /// <summary>
+        /// Zleca zakup produktu wybranego z listy, odejmuje podaną ilość od stanu magazynowego produktu
+        /// </summary>
+        /// <param name="P"></param>
+        /// <param name="ilosc"></param>
         public void ZlecenieZakupu(Produkt P, int ilosc)
         {
             foreach (Produkt e in produkty)
             {
                 if(P == e)
                 {
-                    e.StMag -= ilosc;
+                    if (e.StMag < ilosc)
+                    {
+                        throw new TooManyException();
+                    }
+                    else
+                    {
+                        e.StMag -= ilosc;
+                    }
                 }
             }
         }

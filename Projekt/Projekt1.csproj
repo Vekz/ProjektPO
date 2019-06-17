@@ -57,6 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DzialHandlowy\TooManyException.cs" />
     <Compile Include="DziałProgramowy\Autor.cs" />
     <Compile Include="DzialDruku\DrukarniaAlbumow.cs" />
     <Compile Include="DzialDruku\Drukarnia.cs" />
