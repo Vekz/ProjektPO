@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 namespace Projekt1
 {
     [Serializable]
+    /// <summary>
+    /// Klasa zawierająca umowy o pracę zawarte z autorami.
+    /// </summary>
+    /// <remarks>
+    /// Klasa przechowuje pensję autora oraz czas, na który ma zawartą umowę. Zawiera metodę do zlecania autorowi napisania konkretnej pozycji.
+    /// </remarks>
     class UOP : Umowa
     {
         [NonSerialized] private Wydawnictwo _wyd = null;
@@ -18,7 +24,10 @@ namespace Projekt1
             IloscMsc = iloscMsc;
             _wyd = Wyd;
         }
-        
+        /// <summary>
+        /// Metoda za pomocą której można zlecić autorowi zatrudnionego na umowę o pracę napisanie konkretnej pozycji.
+        /// </summary>
+        /// <param name="k">Książka, która została zlecona autorowi.</param>
         public void Zlecenie(Ksiazka k)    //zmienić na umlu
         {
             _wyd.DzH.ZlecenieDruku(k, 0);

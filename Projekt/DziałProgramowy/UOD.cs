@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 namespace Projekt1
 {
     [Serializable]
+    /// <summary>
+    /// Klasa umów o dzieło zawartych z autorami.
+    /// </summary>
+    /// <remarks>
+    /// Klasa przechowuje obiekt książki, na którą autor ma umowę oraz jego pensję.
+    /// </remarks>
     class UOD : Umowa
     {
         public double Pensja { get; private set; }

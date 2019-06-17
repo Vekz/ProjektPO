@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 namespace Projekt1
 {
     [Serializable]
+    /// <summary>
+    /// Klasa autorów wydawnictwa.
+    /// </summary>
+    /// <remarks>
+    /// Klasa przechowuje imię i nazwisko autora.
+    /// </remarks>
     class Autor
     {
         public string Imie { get; private set; }
