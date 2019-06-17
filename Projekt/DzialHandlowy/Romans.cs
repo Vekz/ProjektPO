@@ -2,6 +2,9 @@
 
 namespace Projekt1
 {
+    /// <summary>
+    /// Klasa Romansu, dziedziczy z Książki
+    /// </summary>
     [Serializable]
     class Romans : Ksiazka
     {

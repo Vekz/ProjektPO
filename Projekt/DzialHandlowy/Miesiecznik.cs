@@ -2,6 +2,9 @@
 
 namespace Projekt1
 {
+    /// <summary>
+    /// Klasa Miesięcznika, dziedziczy z Czasopisma
+    /// </summary>
     [Serializable]
     class Miesiecznik : Czasopismo
     {

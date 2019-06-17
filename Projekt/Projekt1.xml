@@ -4,6 +4,20 @@
         <name>Projekt1</name>
     </assembly>
     <members>
+        <member name="T:Projekt1.Czasopismo">
+            <summary>
+            Klasa 'rodzic' dla każdego rodzaju czasopisma, które są dzielone na numery i nie posiadają autora
+            </summary>
+        </member>
+        <member name="M:Projekt1.Czasopismo.#ctor(System.String,System.Int32,System.Double,System.String)">
+            <summary>
+            Tworzy obiekt czasopisma
+            </summary>
+            <param name="tytul"> Tytuł czasopisma </param>
+            <param name="ilosc"> Stan magazynowy </param>
+            <param name="cena"> Cena </param>
+            <param name="numer"> Numer czasopisma </param>
+        </member>
         <member name="T:Projekt1.DzialHandlowy">
             <summary>
             Dział zajmujący się zlecaniem sprzedaży i druku, przetrzymuje listę produktów
@@ -19,8 +33,50 @@
             <summary>
             Zleca zakup produktu wybranego z listy, odejmuje podaną ilość od stanu magazynowego produktu
             </summary>
-            <param name="P"></param>
-            <param name="ilosc"></param>
+            <param name="P"> Produkt zamawiany </param>
+            <param name="ilosc"> Ilość produktów do usunięcia ze stanu magazynowego </param>
+            <exception cref="T:Projekt1.TooManyException"> Wyrzucone gdy drugi parametr jest większy od stanu magazynowego produktu </exception>
+        </member>
+        <member name="M:Projekt1.DzialHandlowy.ZlecenieDruku(Projekt1.Produkt,System.Int32)">
+            <summary>
+            Zleca druk produktu wybranego z listy, dodaje podaną ilość do stanu magazynowego produktu
+            </summary>
+            <param name="P"> Produkt drukowany </param>
+            <param name="ilosc"> Ilość produktów do dodania do stanu magazynowego </param>
+        </member>
+        <member name="M:Projekt1.DzialHandlowy.PokazKatalogProduktów">
+            <summary>
+            Tworzy string zawierający katalog produktów [NIE UŻYWANE W GRAFICZNEJ WERSJI PROGRAMU]
+            </summary>
+            <returns> String z opisem całej listy produktów </returns>
+        </member>
+        <member name="T:Projekt1.Ksiazka">
+            <summary>
+            Klasa 'rodzic' dla wszystkich rodzajów ksiażek i tomów posiadających autora
+            </summary>
+        </member>
+        <member name="M:Projekt1.Ksiazka.#ctor(Projekt1.Autor,System.String,System.Int32,System.Int32,System.Double)">
+            <summary>
+            Tworzy obiekt książki
+            </summary>
+            <param name="autor"> Autor dzieła </param>
+            <param name="tytul"> Tytuł dzieła </param>
+            <param name="rok"> Rok wydania </param>
+            <param name="ilosc"> Stan magazynowy </param>
+            <param name="cena"> Cena </param>
+        </member>
+        <member name="T:Projekt1.Produkt">
+            <summary>
+            Klasa abstrakcyjna będąca rodzicem dla każdego typu produktu znajdującego się w Wydawnictwie
+            </summary>
+        </member>
+        <member name="M:Projekt1.Produkt.#ctor(System.String,System.Int32,System.Double)">
+            <summary>
+            Tworzy obiekt produktu z określonym tytułem, stanem magazynowym i ceną, używane w konstruktorach klas dziedziczących
+            </summary>
+            <param name="tytul"> Tytuł produktu </param>
+            <param name="ilosc"> Stan magazynowy produktu </param>
+            <param name="cena"> Cena produktu </param>
         </member>
         <member name="T:Projekt1.Wydawnictwo">
             <summary>
