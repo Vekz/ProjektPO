@@ -20,7 +20,7 @@ using System.Windows.Shapes;
 namespace Projekt1
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interfejsu i użycie funkcjonalności Wydawnictwa za pomocą interfejsu
     /// </summary>
     public partial class MainWindow : Window
     {

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Projekt1
 {
+    /// <summary>
+    ///  Głowny obiekt Wydawnictwa, zawierający w sobie wszystkie działy i ich funkcjonalności
+    /// </summary>
     [Serializable]
     class Wydawnictwo
     {
@@ -13,6 +16,9 @@ namespace Projekt1
         public DzialProgramowy DzP;
         public DzialDruku DzD;
 
+        /// <summary>
+        /// Funkcja służąca do przypisania nowych działów do Wydawnictwa
+        /// </summary>
         public void Inicjalizacja()
         {
             DzH = new DzialHandlowy(this);
