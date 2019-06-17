@@ -6,7 +6,7 @@ namespace Projekt1
     /// Klasa zawierająca umowy o pracę zawarte z autorami.
     /// </summary>
     /// <remarks>
-    /// Klasa przechowuje pensję autora oraz czas, na który ma zawartą umowę. Zawiera metodę do zlecania autorowi napisania konkretnej pozycji.
+    /// Klasa przechowuje pensję autora oraz czas, na który ma zawartą umowę. Zawiera metodę do zlecania autorowi napisania konkretnej pozycji. Dziedziczy z umowy.
     /// </remarks>
     [Serializable]
     class UOP : Umowa

@@ -6,7 +6,7 @@ namespace Projekt1
     /// Klasa umów o dzieło zawartych z autorami.
     /// </summary>
     /// <remarks>
-    /// Klasa przechowuje obiekt książki, na którą autor ma umowę oraz jego pensję.
+    /// Klasa przechowuje obiekt książki, na którą autor ma umowę oraz jego pensję. Dziedziczy z umowy.
     /// </remarks>
     [Serializable]
     class UOD : Umowa
