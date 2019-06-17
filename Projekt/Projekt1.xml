@@ -266,6 +266,71 @@
             Przypisuje ComboBoxom odpowiadające listy z działów Wydawnictwa
             </summary>
         </member>
+        <member name="M:Projekt1.MainWindow.Zamawianie_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Wywołuje funkcję ZlecenieZakupu <see cref="M:Projekt1.DzialHandlowy.ZlecenieZakupu(Projekt1.Produkt,System.Int32)"/> wcześniej sprawdzając wprowadzone dane
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.Drukowanie_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Wywołuje funkcję ZlecenieDruku <see cref="M:Projekt1.DzialHandlowy.ZlecenieDruku(Projekt1.Produkt,System.Int32)"/> wcześniej sprawdzając wprowadzone dane
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.Usuwanie_a_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Usuwa autora z listy autorów Wydawnictwa, znajdującej się w Dziale Programowym <see cref="M:Projekt1.DzialProgramowy.UsunAutora(Projekt1.Autor)"/>
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.Rozwiązywanie_a_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Rozwiązuje umowę z autorem, usuwając ją z listy znajdującej się w Dziale Programowym <see cref="M:Projekt1.DzialProgramowy.RozwiazUmowe(Projekt1.Umowa)"/>
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.SprawdzanieInputu(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Sprawdza czy dane wprowadzane pasują do podanego w funkcji Regexa (Należą do liczb 0-9)
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.Dodawanie_a_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Sprawdza dane wprowadzone do formularza i dodaje autora do listy Działu Programowego <see cref="M:Projekt1.DzialProgramowy.DodajAutora(Projekt1.Autor)"/>
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.Dodawanie_k_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Sprawdza dane wprowadzone do forumlarza i dodaje produkt do listy Działu Handlowego <see cref="M:Projekt1.DzialHandlowy.ZlecenieDruku(Projekt1.Produkt,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.TextBox_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            W momencie gdy pole tekstowe łapie focus jest czyszczone aby użytkownik nie musiał usuwać ręcznie zawartego "placeholder'a"
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.O_prace_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Dodaje umowę o pracę do listy w Dziale Programowym <see cref="M:Projekt1.DzialProgramowy.ZawrzyjUmoweUOP(Projekt1.UOP)"/>
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.O_dzielo_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Dodaje umowę o dzieło do listy w Dziale Programowym <see cref="M:Projekt1.DzialProgramowy.ZawrzyjUmoweUOD(Projekt1.UOD)"/> jednocześnie zlecając utworzenie nowego dzieła <see cref="M:Projekt1.DzialHandlowy.ZlecenieDruku(Projekt1.Produkt,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.Zapisz(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Używając mechanizmu serializacji zapisuje drzewo obiektów do pliku
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.Wczytaj(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Używając mechanizmu deserializacji odczytuje drzewo obiektów z pliku
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.O_prace_p_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Dodaje nowego autora do listy autorów w Dziale Programowym <see cref="M:Projekt1.DzialProgramowy.ZawrzyjUmoweUOP(Projekt1.UOP)"/> i zleca mu napisanie dzieła <see cref="M:Projekt1.UOP.Zlecenie(Projekt1.Ksiazka)"/>
+            </summary>
+        </member>
         <member name="M:Projekt1.MainWindow.InitializeComponent">
             <summary>
             InitializeComponent
