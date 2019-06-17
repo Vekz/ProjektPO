@@ -349,7 +349,6 @@ namespace Projekt1
                 BinaryFormatter formatter = new BinaryFormatter();
 
                 formatter.Serialize(stream, Wyd);
-                stream.Close();
             }
             Wyd = null;
             Wyd = new Wydawnictwo();
@@ -369,7 +368,6 @@ namespace Projekt1
                 Wyd = null;
                 Wyd = (Wydawnictwo)formatter.Deserialize(stream);
                 Wyd.DzH._wyd = Wyd;
-                stream.Close();
             }
             Inicjuj();
         }

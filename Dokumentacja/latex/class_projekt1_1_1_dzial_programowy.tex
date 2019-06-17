@@ -1,0 +1,160 @@
+\hypertarget{class_projekt1_1_1_dzial_programowy}{}\section{Projekt1.\+Dzial\+Programowy Class Reference}
+\label{class_projekt1_1_1_dzial_programowy}\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+
+
+Klasa działu programowego zajmującego się zawieraniem umów oraz autorami.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_projekt1_1_1_dzial_programowy_abb3d14c312ae10ce95b8b7800b6a7a78}{Usun\+Autora}} (\mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}} a)
+\begin{DoxyCompactList}\small\item\em Metoda usuwająca autora z listy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projekt1_1_1_dzial_programowy_ae3036a341f8a8ecc9c4069cc3604a8d3}{Dodaj\+Autora}} (\mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}} a)
+\begin{DoxyCompactList}\small\item\em Metoda dodająca autora do listy. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_projekt1_1_1_dzial_programowy_aa6a32f8a0d11777efb667ec30b6d0441}{Przeglad\+Autorow}} ()
+\begin{DoxyCompactList}\small\item\em Metoda tworząca spis wszystkich autorów wydawnictwa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projekt1_1_1_dzial_programowy_ae4c62d15b8d0083f6501c44f5255abb6}{Zawrzyj\+Umowe\+U\+OD}} (\mbox{\hyperlink{class_projekt1_1_1_u_o_d}{U\+OD}} uod)
+\begin{DoxyCompactList}\small\item\em Metoda dodająca do listy umów umowę o dzieło. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projekt1_1_1_dzial_programowy_a7814d93c057013c72d4b5f7153ed3530}{Zawrzyj\+Umowe\+U\+OP}} (\mbox{\hyperlink{class_projekt1_1_1_u_o_p}{U\+OP}} uop)
+\begin{DoxyCompactList}\small\item\em Metoda dodająca do listy umów umowę o pracę. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projekt1_1_1_dzial_programowy_a3852b732a1b07ffc107ac6dc90fb5d64}{Rozwiaz\+Umowe}} (\mbox{\hyperlink{class_projekt1_1_1_umowa}{Umowa}} u)
+\begin{DoxyCompactList}\small\item\em Metoda usuwająca z listy umowę. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_projekt1_1_1_dzial_programowy_ace0526308526f95c29cc53060ea08b4a}{Przeglad\+Umow}} ()
+\begin{DoxyCompactList}\small\item\em Metoda tworząca spis zawartych umów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}} $>$ \mbox{\hyperlink{class_projekt1_1_1_dzial_programowy_aa115c071c0608e10798a1ca503bc8181}{autorzy}} = new List$<$\mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}}$>$()
+\item 
+List$<$ \mbox{\hyperlink{class_projekt1_1_1_umowa}{Umowa}} $>$ \mbox{\hyperlink{class_projekt1_1_1_dzial_programowy_a0971983aaa0d5e26960a30ee22974301}{umowy}} = new List$<$\mbox{\hyperlink{class_projekt1_1_1_umowa}{Umowa}}$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa działu programowego zajmującego się zawieraniem umów oraz autorami. 
+
+Zawiera metody do zarządzania autorami oraz ich umowami. Przechowuje listę autorów i umów. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_programowy_ae3036a341f8a8ecc9c4069cc3604a8d3}\label{class_projekt1_1_1_dzial_programowy_ae3036a341f8a8ecc9c4069cc3604a8d3}} 
+\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}!DodajAutora@{DodajAutora}}
+\index{DodajAutora@{DodajAutora}!Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+\subsubsection{\texorpdfstring{DodajAutora()}{DodajAutora()}}
+{\footnotesize\ttfamily void Projekt1.\+Dzial\+Programowy.\+Dodaj\+Autora (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Metoda dodająca autora do listy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}}, który ma zostać dodany do listy.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_programowy_aa6a32f8a0d11777efb667ec30b6d0441}\label{class_projekt1_1_1_dzial_programowy_aa6a32f8a0d11777efb667ec30b6d0441}} 
+\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}!PrzegladAutorow@{PrzegladAutorow}}
+\index{PrzegladAutorow@{PrzegladAutorow}!Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+\subsubsection{\texorpdfstring{PrzegladAutorow()}{PrzegladAutorow()}}
+{\footnotesize\ttfamily String Projekt1.\+Dzial\+Programowy.\+Przeglad\+Autorow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda tworząca spis wszystkich autorów wydawnictwa. 
+
+\begin{DoxyReturn}{Returns}
+Spis imion i nazwisk wszystkich autorów wydawnictwa. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_programowy_ace0526308526f95c29cc53060ea08b4a}\label{class_projekt1_1_1_dzial_programowy_ace0526308526f95c29cc53060ea08b4a}} 
+\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}!PrzegladUmow@{PrzegladUmow}}
+\index{PrzegladUmow@{PrzegladUmow}!Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+\subsubsection{\texorpdfstring{PrzegladUmow()}{PrzegladUmow()}}
+{\footnotesize\ttfamily String Projekt1.\+Dzial\+Programowy.\+Przeglad\+Umow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda tworząca spis zawartych umów. 
+
+\begin{DoxyReturn}{Returns}
+W przypadku umowy o pracę -\/ pensja oraz czas, na który została zawarta umowa. W przypadku umowy o dzieło -\/ pensja oraz pozycja, na którą została zawarta umowa. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_programowy_a3852b732a1b07ffc107ac6dc90fb5d64}\label{class_projekt1_1_1_dzial_programowy_a3852b732a1b07ffc107ac6dc90fb5d64}} 
+\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}!RozwiazUmowe@{RozwiazUmowe}}
+\index{RozwiazUmowe@{RozwiazUmowe}!Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+\subsubsection{\texorpdfstring{RozwiazUmowe()}{RozwiazUmowe()}}
+{\footnotesize\ttfamily void Projekt1.\+Dzial\+Programowy.\+Rozwiaz\+Umowe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projekt1_1_1_umowa}{Umowa}}}]{u }\end{DoxyParamCaption})}
+
+
+
+Metoda usuwająca z listy umowę. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Obiekt umowy do usunięcia.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_programowy_abb3d14c312ae10ce95b8b7800b6a7a78}\label{class_projekt1_1_1_dzial_programowy_abb3d14c312ae10ce95b8b7800b6a7a78}} 
+\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}!UsunAutora@{UsunAutora}}
+\index{UsunAutora@{UsunAutora}!Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+\subsubsection{\texorpdfstring{UsunAutora()}{UsunAutora()}}
+{\footnotesize\ttfamily void Projekt1.\+Dzial\+Programowy.\+Usun\+Autora (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Metoda usuwająca autora z listy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}}, który ma zostać usunięty z listy.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_programowy_ae4c62d15b8d0083f6501c44f5255abb6}\label{class_projekt1_1_1_dzial_programowy_ae4c62d15b8d0083f6501c44f5255abb6}} 
+\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}!ZawrzyjUmoweUOD@{ZawrzyjUmoweUOD}}
+\index{ZawrzyjUmoweUOD@{ZawrzyjUmoweUOD}!Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+\subsubsection{\texorpdfstring{ZawrzyjUmoweUOD()}{ZawrzyjUmoweUOD()}}
+{\footnotesize\ttfamily void Projekt1.\+Dzial\+Programowy.\+Zawrzyj\+Umowe\+U\+OD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projekt1_1_1_u_o_d}{U\+OD}}}]{uod }\end{DoxyParamCaption})}
+
+
+
+Metoda dodająca do listy umów umowę o dzieło. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uod} & Obiekt umowy o dzieło.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_programowy_a7814d93c057013c72d4b5f7153ed3530}\label{class_projekt1_1_1_dzial_programowy_a7814d93c057013c72d4b5f7153ed3530}} 
+\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}!ZawrzyjUmoweUOP@{ZawrzyjUmoweUOP}}
+\index{ZawrzyjUmoweUOP@{ZawrzyjUmoweUOP}!Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+\subsubsection{\texorpdfstring{ZawrzyjUmoweUOP()}{ZawrzyjUmoweUOP()}}
+{\footnotesize\ttfamily void Projekt1.\+Dzial\+Programowy.\+Zawrzyj\+Umowe\+U\+OP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projekt1_1_1_u_o_p}{U\+OP}}}]{uop }\end{DoxyParamCaption})}
+
+
+
+Metoda dodająca do listy umów umowę o pracę. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uop} & Obiekt umowy o pracę.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_programowy_aa115c071c0608e10798a1ca503bc8181}\label{class_projekt1_1_1_dzial_programowy_aa115c071c0608e10798a1ca503bc8181}} 
+\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}!autorzy@{autorzy}}
+\index{autorzy@{autorzy}!Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+\subsubsection{\texorpdfstring{autorzy}{autorzy}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}}$>$ Projekt1.\+Dzial\+Programowy.\+autorzy = new List$<$\mbox{\hyperlink{class_projekt1_1_1_autor}{Autor}}$>$()}
+
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_programowy_a0971983aaa0d5e26960a30ee22974301}\label{class_projekt1_1_1_dzial_programowy_a0971983aaa0d5e26960a30ee22974301}} 
+\index{Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}!umowy@{umowy}}
+\index{umowy@{umowy}!Projekt1.DzialProgramowy@{Projekt1.DzialProgramowy}}
+\subsubsection{\texorpdfstring{umowy}{umowy}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_projekt1_1_1_umowa}{Umowa}}$>$ Projekt1.\+Dzial\+Programowy.\+umowy = new List$<$\mbox{\hyperlink{class_projekt1_1_1_umowa}{Umowa}}$>$()}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dzial_programowy_8cs}{Dzial\+Programowy.\+cs}}\end{DoxyCompactItemize}

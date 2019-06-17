@@ -1,0 +1,72 @@
+\hypertarget{class_projekt1_1_1_dzial_druku}{}\section{Projekt1.\+Dzial\+Druku Class Reference}
+\label{class_projekt1_1_1_dzial_druku}\index{Projekt1.DzialDruku@{Projekt1.DzialDruku}}
+
+
+Dział obsługujący drukarnie i druk  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projekt1_1_1_dzial_druku_a8fe614a7a09f835bc697ce246ff0d20b}{Dzial\+Druku}} ()
+\begin{DoxyCompactList}\small\item\em Tworzy dział druku zawierający 3 drukarnie -\/ 2 zwyczajne i 1 drukarnię albumów \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_projekt1_1_1_dzial_druku_add9b31eeff5ca306c6dd033e83978323}{Zlecenie\+Druku}} (\mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}} a)
+\begin{DoxyCompactList}\small\item\em Wywoływane przez Zlecenie\+Druku w Dziale Handlowym \mbox{\hyperlink{class_projekt1_1_1_dzial_handlowy_a42c78f53cf41e75b39498a7da96e7bc3}{Dzial\+Handlowy.\+Zlecenie\+Druku(\+Produkt, int)}} Na podstawie typu produktu dokonywana jest ocena czy produkt zostanie wydrukowany \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_projekt1_1_1_drukarnia}{Drukarnia}} $>$ \mbox{\hyperlink{class_projekt1_1_1_dzial_druku_acf9822fccb837b00ff5fc6030dedd232}{drukarnie}} = new List$<$\mbox{\hyperlink{class_projekt1_1_1_drukarnia}{Drukarnia}}$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dział obsługujący drukarnie i druk 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_druku_a8fe614a7a09f835bc697ce246ff0d20b}\label{class_projekt1_1_1_dzial_druku_a8fe614a7a09f835bc697ce246ff0d20b}} 
+\index{Projekt1.DzialDruku@{Projekt1.DzialDruku}!DzialDruku@{DzialDruku}}
+\index{DzialDruku@{DzialDruku}!Projekt1.DzialDruku@{Projekt1.DzialDruku}}
+\subsubsection{\texorpdfstring{DzialDruku()}{DzialDruku()}}
+{\footnotesize\ttfamily Projekt1.\+Dzial\+Druku.\+Dzial\+Druku (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tworzy dział druku zawierający 3 drukarnie -\/ 2 zwyczajne i 1 drukarnię albumów 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_druku_add9b31eeff5ca306c6dd033e83978323}\label{class_projekt1_1_1_dzial_druku_add9b31eeff5ca306c6dd033e83978323}} 
+\index{Projekt1.DzialDruku@{Projekt1.DzialDruku}!ZlecenieDruku@{ZlecenieDruku}}
+\index{ZlecenieDruku@{ZlecenieDruku}!Projekt1.DzialDruku@{Projekt1.DzialDruku}}
+\subsubsection{\texorpdfstring{ZlecenieDruku()}{ZlecenieDruku()}}
+{\footnotesize\ttfamily bool Projekt1.\+Dzial\+Druku.\+Zlecenie\+Druku (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Wywoływane przez Zlecenie\+Druku w Dziale Handlowym \mbox{\hyperlink{class_projekt1_1_1_dzial_handlowy_a42c78f53cf41e75b39498a7da96e7bc3}{Dzial\+Handlowy.\+Zlecenie\+Druku(\+Produkt, int)}} Na podstawie typu produktu dokonywana jest ocena czy produkt zostanie wydrukowany 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}} przekazany do druku \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ jeśli produkt może zostać wydrukowany (jest drukarnia która obsłuży dany typ produktu) 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_druku_acf9822fccb837b00ff5fc6030dedd232}\label{class_projekt1_1_1_dzial_druku_acf9822fccb837b00ff5fc6030dedd232}} 
+\index{Projekt1.DzialDruku@{Projekt1.DzialDruku}!drukarnie@{drukarnie}}
+\index{drukarnie@{drukarnie}!Projekt1.DzialDruku@{Projekt1.DzialDruku}}
+\subsubsection{\texorpdfstring{drukarnie}{drukarnie}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_projekt1_1_1_drukarnia}{Drukarnia}}$>$ Projekt1.\+Dzial\+Druku.\+drukarnie = new List$<$\mbox{\hyperlink{class_projekt1_1_1_drukarnia}{Drukarnia}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dzial_druku_8cs}{Dzial\+Druku.\+cs}}\end{DoxyCompactItemize}

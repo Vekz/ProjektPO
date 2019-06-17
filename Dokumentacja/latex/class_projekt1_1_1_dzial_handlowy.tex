@@ -1,0 +1,123 @@
+\hypertarget{class_projekt1_1_1_dzial_handlowy}{}\section{Projekt1.\+Dzial\+Handlowy Class Reference}
+\label{class_projekt1_1_1_dzial_handlowy}\index{Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}}
+
+
+Dział zajmujący się zlecaniem sprzedaży i druku, przetrzymuje listę produktów  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projekt1_1_1_dzial_handlowy_ad5c7110f56857cc32a3dfaf0811d72a4}{Dzial\+Handlowy}} (\mbox{\hyperlink{class_projekt1_1_1_wydawnictwo}{Wydawnictwo}} Wyd)
+\begin{DoxyCompactList}\small\item\em Tworzy obiekt Działu Handlowego \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projekt1_1_1_dzial_handlowy_acd312cb8369482f492936c642ef5170f}{Zlecenie\+Zakupu}} (\mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}} P, int ilosc)
+\begin{DoxyCompactList}\small\item\em Zleca zakup produktu wybranego z listy, odejmuje podaną ilość od stanu magazynowego produktu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projekt1_1_1_dzial_handlowy_a42c78f53cf41e75b39498a7da96e7bc3}{Zlecenie\+Druku}} (\mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}} P, int ilosc)
+\begin{DoxyCompactList}\small\item\em Zleca druk produktu wybranego z listy, dodaje podaną ilość do stanu magazynowego produktu \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_projekt1_1_1_dzial_handlowy_ab9f6e28c74e71c9348c1f03b731c71c1}{Pokaz\+Katalog\+Produktów}} ()
+\begin{DoxyCompactList}\small\item\em Tworzy string zawierający katalog produktów \mbox{[}N\+IE UŻ\+Y\+W\+A\+NE W G\+R\+A\+F\+I\+C\+Z\+N\+EJ W\+E\+R\+S\+JI P\+R\+O\+G\+R\+A\+MU\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projekt1_1_1_wydawnictwo}{Wydawnictwo}} \mbox{\hyperlink{class_projekt1_1_1_dzial_handlowy_a9fa7f63ee2ce0974a38f86cc1ef9c042}{\+\_\+wyd}} = null
+\item 
+List$<$ \mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}} $>$ \mbox{\hyperlink{class_projekt1_1_1_dzial_handlowy_a72a83f1d777ad8acafc3e071d1fc64d7}{produkty}} = new List$<$\mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}}$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dział zajmujący się zlecaniem sprzedaży i druku, przetrzymuje listę produktów 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_handlowy_ad5c7110f56857cc32a3dfaf0811d72a4}\label{class_projekt1_1_1_dzial_handlowy_ad5c7110f56857cc32a3dfaf0811d72a4}} 
+\index{Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}!DzialHandlowy@{DzialHandlowy}}
+\index{DzialHandlowy@{DzialHandlowy}!Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}}
+\subsubsection{\texorpdfstring{DzialHandlowy()}{DzialHandlowy()}}
+{\footnotesize\ttfamily Projekt1.\+Dzial\+Handlowy.\+Dzial\+Handlowy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projekt1_1_1_wydawnictwo}{Wydawnictwo}}}]{Wyd }\end{DoxyParamCaption})}
+
+
+
+Tworzy obiekt Działu Handlowego 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Wyd} & Obiekt rodzica -\/ Wydawnictwa \mbox{\hyperlink{class_projekt1_1_1_wydawnictwo}{Wydawnictwo}}, aby mieć dostęp do metod innych działów \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_handlowy_ab9f6e28c74e71c9348c1f03b731c71c1}\label{class_projekt1_1_1_dzial_handlowy_ab9f6e28c74e71c9348c1f03b731c71c1}} 
+\index{Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}!PokazKatalogProduktów@{PokazKatalogProduktów}}
+\index{PokazKatalogProduktów@{PokazKatalogProduktów}!Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}}
+\subsubsection{\texorpdfstring{PokazKatalogProduktów()}{PokazKatalogProduktów()}}
+{\footnotesize\ttfamily String Projekt1.\+Dzial\+Handlowy.\+Pokaz\+Katalog\+Produktów (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tworzy string zawierający katalog produktów \mbox{[}N\+IE UŻ\+Y\+W\+A\+NE W G\+R\+A\+F\+I\+C\+Z\+N\+EJ W\+E\+R\+S\+JI P\+R\+O\+G\+R\+A\+MU\mbox{]} 
+
+\begin{DoxyReturn}{Returns}
+String z opisem całej listy produktów 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_handlowy_a42c78f53cf41e75b39498a7da96e7bc3}\label{class_projekt1_1_1_dzial_handlowy_a42c78f53cf41e75b39498a7da96e7bc3}} 
+\index{Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}!ZlecenieDruku@{ZlecenieDruku}}
+\index{ZlecenieDruku@{ZlecenieDruku}!Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}}
+\subsubsection{\texorpdfstring{ZlecenieDruku()}{ZlecenieDruku()}}
+{\footnotesize\ttfamily void Projekt1.\+Dzial\+Handlowy.\+Zlecenie\+Druku (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}}}]{P,  }\item[{int}]{ilosc }\end{DoxyParamCaption})}
+
+
+
+Zleca druk produktu wybranego z listy, dodaje podaną ilość do stanu magazynowego produktu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & \mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}} drukowany \\
+\hline
+{\em ilosc} & Ilość produktów do dodania do stanu magazynowego \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_handlowy_acd312cb8369482f492936c642ef5170f}\label{class_projekt1_1_1_dzial_handlowy_acd312cb8369482f492936c642ef5170f}} 
+\index{Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}!ZlecenieZakupu@{ZlecenieZakupu}}
+\index{ZlecenieZakupu@{ZlecenieZakupu}!Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}}
+\subsubsection{\texorpdfstring{ZlecenieZakupu()}{ZlecenieZakupu()}}
+{\footnotesize\ttfamily void Projekt1.\+Dzial\+Handlowy.\+Zlecenie\+Zakupu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}}}]{P,  }\item[{int}]{ilosc }\end{DoxyParamCaption})}
+
+
+
+Zleca zakup produktu wybranego z listy, odejmuje podaną ilość od stanu magazynowego produktu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & \mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}} zamawiany \\
+\hline
+{\em ilosc} & Ilość produktów do usunięcia ze stanu magazynowego \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_projekt1_1_1_too_many_exception}{Too\+Many\+Exception}}} & Wyrzucone gdy drugi parametr jest większy od stanu magazynowego produktu \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_handlowy_a9fa7f63ee2ce0974a38f86cc1ef9c042}\label{class_projekt1_1_1_dzial_handlowy_a9fa7f63ee2ce0974a38f86cc1ef9c042}} 
+\index{Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}!\_wyd@{\_wyd}}
+\index{\_wyd@{\_wyd}!Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}}
+\subsubsection{\texorpdfstring{\_wyd}{\_wyd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projekt1_1_1_wydawnictwo}{Wydawnictwo}} Projekt1.\+Dzial\+Handlowy.\+\_\+wyd = null}
+
+\mbox{\Hypertarget{class_projekt1_1_1_dzial_handlowy_a72a83f1d777ad8acafc3e071d1fc64d7}\label{class_projekt1_1_1_dzial_handlowy_a72a83f1d777ad8acafc3e071d1fc64d7}} 
+\index{Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}!produkty@{produkty}}
+\index{produkty@{produkty}!Projekt1.DzialHandlowy@{Projekt1.DzialHandlowy}}
+\subsubsection{\texorpdfstring{produkty}{produkty}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}}$>$ Projekt1.\+Dzial\+Handlowy.\+produkty = new List$<$\mbox{\hyperlink{class_projekt1_1_1_produkt}{Produkt}}$>$()}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dzial_handlowy_8cs}{Dzial\+Handlowy.\+cs}}\end{DoxyCompactItemize}
