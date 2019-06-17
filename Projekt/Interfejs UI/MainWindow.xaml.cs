@@ -183,18 +183,39 @@ namespace Projekt1
                 }
                 else if (rodzaj_k.Text == "Książka")
                 {
-                    Wyd.DzH.ZlecenieDruku(new Ksiazka((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
-                    MessageBox.Show("Książka podana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    if (lista_autorow.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Podaj autora.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        Wyd.DzH.ZlecenieDruku(new Ksiazka((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
+                        MessageBox.Show("Książka podana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
                 }
                 else if (rodzaj_k.Text == "Romans")
                 {
-                    Wyd.DzH.ZlecenieDruku(new Romans((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
-                    MessageBox.Show("Książka podana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    if (lista_autorow.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Podaj autora.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        Wyd.DzH.ZlecenieDruku(new Romans((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
+                        MessageBox.Show("Książka podana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
                 }
                 else if (rodzaj_k.Text == "Album")
                 {
-                    Wyd.DzH.ZlecenieDruku(new Album((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
-                    MessageBox.Show("Książka podana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    if (lista_autorow.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Podaj autora.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        Wyd.DzH.ZlecenieDruku(new Album((Autor)lista_autorow.SelectedItem, tytul.Text, r, 0, c), i);
+                        MessageBox.Show("Książka podana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
                 }
                 else MessageBox.Show("Proszę dodawać rodzaj książki jaki istnieje!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
 
