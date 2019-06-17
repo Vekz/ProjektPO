@@ -240,12 +240,18 @@ namespace Projekt1
 
         }
 
+        /// <summary>
+        /// W momencie gdy pole tekstowe łapie focus jest czyszczone aby użytkownik nie musiał usuwać ręcznie zawartego "placeholder'a"
+        /// </summary>
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             TextBox b = (TextBox)sender;
             b.Text = "";
         }
 
+        /// <summary>
+        /// Dodaje umowę o pracę do listy w Dziale Programowym <see cref="DzialProgramowy.ZawrzyjUmoweUOP(UOP)"/>
+        /// </summary>
         private void O_prace_Click(object sender, RoutedEventArgs e)
         {
             if (imie_p.Text == "Podaj imię" || imie_p.Text == "" || nazwisko_p.Text == "Podaj nazwisko" || nazwisko_p.Text == "" || pensja_p.Text == "Podaj pensję" || ilosc_m.Text == "Ilość miesięcy" || pensja_p.Text == "" || ilosc_m.Text == "")
@@ -275,6 +281,9 @@ namespace Projekt1
 
         }
 
+        /// <summary>
+        /// Dodaje umowę o dzieło do listy w Dziale Programowym <see cref="DzialProgramowy.ZawrzyjUmoweUOD(UOD)"/> jednocześnie zlecając utworzenie nowego dzieła <see cref="DzialHandlowy.ZlecenieDruku(Produkt, int)"/>
+        /// </summary>
         private void O_dzielo_Click(object sender, RoutedEventArgs e)
         {
             if (imie_d.Text == "Podaj imię" || imie_d.Text == "" || nazwisko_d.Text == "Podaj nazwisko" || nazwisko_d.Text == "" || pensja_d.Text == "Podaj pensję" || pensja_d.Text == "" || tytul.Text == "Podaj tytuł" || tytul.Text == "" || cena.Text == "Podaj cenę"  || rok.Text == "Podaj rok wydania" || cena.Text == "" || rok.Text == "")
@@ -330,6 +339,9 @@ namespace Projekt1
             }
         }
 
+        /// <summary>
+        /// Używając mechanizmu serializacji zapisuje drzewo obiektów do pliku
+        /// </summary>
         private void Zapisz(object sender, RoutedEventArgs e)
         {
             using (Stream stream = File.Open("data.dat", FileMode.Create, FileAccess.Write))
@@ -345,6 +357,9 @@ namespace Projekt1
             Inicjuj();
         }
 
+        /// <summary>
+        /// Używając mechanizmu deserializacji odczytuje drzewo obiektów z pliku
+        /// </summary>
         private void Wczytaj(object sender, RoutedEventArgs e)
         {
             using (Stream stream = File.Open("data.dat", FileMode.Open, FileAccess.Read))
@@ -359,6 +374,9 @@ namespace Projekt1
             Inicjuj();
         }
 
+        /// <summary>
+        /// Dodaje nowego autora do listy autorów w Dziale Programowym <see cref="DzialProgramowy.ZawrzyjUmoweUOP(UOP)"/> i zleca mu napisanie dzieła <see cref="UOP.Zlecenie(Ksiazka)"/>
+        /// </summary>
         private void O_prace_p_Click(object sender, RoutedEventArgs e)
         {
             if (imie_p.Text == "Podaj imię" || imie_p.Text == "" || nazwisko_p.Text == "Podaj nazwisko" || nazwisko_p.Text == "" || pensja_p.Text == "Podaj pensję" || pensja_p.Text == "" || ilosc_m.Text == "Ilość miesięcy" || ilosc_m.Text == "" || tytul.Text == "" || tytul.Text == "Podaj tytuł" || cena.Text == "Podaj cenę" || cena.Text == "" || rok.Text == "Podaj rok wydania" || rok.Text == "")
