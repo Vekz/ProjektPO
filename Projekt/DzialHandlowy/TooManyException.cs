@@ -2,6 +2,9 @@
 
 namespace Projekt1
 {
+    /// <summary>
+    /// Wyjątek wyrzucany w momencie gdy wartość podana powodu odjęcie za dużej wartości
+    /// </summary>
     public class TooManyException : Exception
     {
         public TooManyException()

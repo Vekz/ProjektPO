@@ -35,6 +35,9 @@ namespace Projekt1
             lista_umow.ItemsSource = Wyd.DzP.umowy;
         }
 
+        /// <summary>
+        /// Wywołuje funkcję ZlecenieZakupu <see cref="DzialHandlowy.ZlecenieZakupu(Produkt, int)"/> wcześniej sprawdzając wprowadzone dane
+        /// </summary>
         private void Zamawianie_Click(object sender, RoutedEventArgs e)
         {
             if (ilosc.Text == "Ilość ksiązek do druku/zamówienia." || ilosc.Text == "")
@@ -50,7 +53,7 @@ namespace Projekt1
                 }
                 catch (TooManyException x)
                 {
-                    MessageBox.Show("Proszę zamówić ilość jaka jest na stanie!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Proszę zamówić ilość jaka jest na stanie!", x.GetType().Name, MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
                 lista_ksiazek.Items.Refresh();
@@ -59,9 +62,12 @@ namespace Projekt1
             }
         }
 
+        /// <summary>
+        /// Wywołuje funkcję ZlecenieDruku <see cref="DzialHandlowy.ZlecenieDruku(Produkt, int)"/> wcześniej sprawdzając wprowadzone dane
+        /// </summary>
         private void Drukowanie_Click(object sender, RoutedEventArgs e)
         {
-            if (ilosc.Text == "Ilość ksiązek do druku/zamówienia." || ilosc.Text == "")
+            if (ilosc.Text == "Ilość produktu do druku/zamówienia." || ilosc.Text == "")
             {
                 MessageBox.Show("Podaj poprawną ilość książek.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -75,6 +81,9 @@ namespace Projekt1
             }
         }
 
+        /// <summary>
+        /// Usuwa autora z listy autorów Wydawnictwa, znajdującej się w Dziale Programowym <see cref="DzialProgramowy.UsunAutora(Autor)"/>
+        /// </summary>
         private void Usuwanie_a_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Autor usunięty poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -83,6 +92,9 @@ namespace Projekt1
             lista_autorow.Items.Refresh();
         }
 
+        /// <summary>
+        /// Rozwiązuje umowę z autorem, usuwając ją z listy znajdującej się w Dziale Programowym <see cref="DzialProgramowy.RozwiazUmowe(Umowa)"/>
+        /// </summary>
         private void Rozwiązywanie_a_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Udało się rozwiązać umowę.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -91,17 +103,20 @@ namespace Projekt1
             lista_umow.Items.Refresh();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
+        private void Window_Loaded(object sender, RoutedEventArgs e) { }
 
-        }
-
+        /// <summary>
+        /// Sprawdza czy dane wprowadzane pasują do podanego w funkcji Regexa (Należą do liczb 0-9)
+        /// </summary>
         private void SprawdzanieInputu(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
 
+        /// <summary>
+        /// Sprawdza dane wprowadzone do formularza i dodaje autora do listy Działu Programowego <see cref="DzialProgramowy.DodajAutora(Autor)"/>
+        /// </summary>
         private void Dodawanie_a_Click(object sender, RoutedEventArgs e)
         {
             if (imie.Text == "Podaj imię" || imie.Text == "" || nazwisko.Text == "Podaj nazwisko" || nazwisko.Text == "")
@@ -120,9 +135,12 @@ namespace Projekt1
             }
         }
 
+        /// <summary>
+        /// Sprawdza dane wprowadzone do forumlarza i dodaje produkt do listy Działu Handlowego <see cref="DzialHandlowy.ZlecenieDruku(Produkt, int)"/>
+        /// </summary>
         private void Dodawanie_k_Click(object sender, RoutedEventArgs e)
         {
-            if (tytul.Text == "Podaj tytuł" || tytul.Text == "" || cena.Text == "Podaj cenę" || ilosc1.Text == "Podaj ilość książek" || rok.Text == "Podaj rok wydania" || cena.Text == "" || ilosc1.Text == "" || rok.Text == "")
+            if (tytul.Text == "Podaj tytuł" || tytul.Text == "" || cena.Text == "Podaj cenę" || ilosc1.Text == "Podaj ilość produktu" || rok.Text == "Podaj rok wydania" || cena.Text == "" || ilosc1.Text == "" || rok.Text == "")
             {
                 MessageBox.Show("Podaj poprawne dane.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -208,7 +226,7 @@ namespace Projekt1
                         MessageBox.Show("Książka podana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
-                else MessageBox.Show("Proszę dodawać rodzaj książki jaki istnieje!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
+                else MessageBox.Show("Proszę dodawać istniejący rodzaj książki!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 lista_ksiazek.Items.Refresh();
                 lista_ksiazek.Items.Refresh();
@@ -294,7 +312,7 @@ namespace Projekt1
                     Wyd.DzP.ZawrzyjUmoweUOD(new UOD(autor_d, Convert.ToDouble(pensja_d.Text), new Album(autor_d, tytul.Text, r, 0, c)));
                     MessageBox.Show("Umowa dodana poprawnie.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                else MessageBox.Show("Proszę dodawać rodzaj książki jaki istnieje!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
+                else MessageBox.Show("Proszę dodawać istniejący rodzaj książki!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 lista_ksiazek.Items.Refresh();
                 lista_ksiazek.Items.Refresh();

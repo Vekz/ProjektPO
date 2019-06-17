@@ -4,6 +4,52 @@
         <name>Projekt1</name>
     </assembly>
     <members>
+        <member name="T:Projekt1.TooManyException">
+            <summary>
+            Wyjątek wyrzucany w momencie gdy wartość podana powodu odjęcie za dużej wartości
+            </summary>
+        </member>
+        <member name="T:Projekt1.Autor">
+            <summary>
+            Klasa autorów wydawnictwa.
+            </summary>
+            <remarks>
+            Klasa przechowuje imię i nazwisko autora.
+            </remarks>
+        </member>
+        <member name="T:Projekt1.DrukarniaAlbumow">
+            <summary>
+            Klasa drukarni albumów
+            </summary>
+        </member>
+        <member name="T:Projekt1.Drukarnia">
+            <summary>
+            Klasa drukarni
+            </summary>
+        </member>
+        <member name="T:Projekt1.DzialDruku">
+            <summary>
+            Dział obsługujący drukarnie i druk
+            </summary>
+        </member>
+        <member name="M:Projekt1.DzialDruku.#ctor">
+            <summary>
+            Tworzy dział druku zawierający 3 drukarnie - 2 zwyczajne i 1 drukarnię albumów
+            </summary>
+        </member>
+        <member name="M:Projekt1.DzialDruku.ZlecenieDruku(Projekt1.Produkt)">
+            <summary>
+            Wywoływane przez ZlecenieDruku w Dziale Handlowym <see cref="M:Projekt1.DzialHandlowy.ZlecenieDruku(Projekt1.Produkt,System.Int32)"/>
+            Na podstawie typu produktu dokonywana jest ocena czy produkt zostanie wydrukowany
+            </summary>
+            <param name="a"> Produkt przekazany do druku </param>
+            <returns> True - jeśli produkt może zostać wydrukowany (jest drukarnia która obsłuży dany typ produktu) </returns>
+        </member>
+        <member name="T:Projekt1.Album">
+            <summary>
+            Klasa Albumu, dziedziczy z Książki
+            </summary>
+        </member>
         <member name="T:Projekt1.Czasopismo">
             <summary>
             Klasa 'rodzic' dla każdego rodzaju czasopisma, które są dzielone na numery i nie posiadają autora
@@ -27,7 +73,7 @@
             <summary>
             Tworzy obiekt Działu Handlowego
             </summary>
-            <param name="Wyd"> Obiekt rodzica - Wydawnictwa, aby mieć dostęp do metod innych działów </param>
+            <param name="Wyd"> Obiekt rodzica - Wydawnictwa <see cref="T:Projekt1.Wydawnictwo"/>, aby mieć dostęp do metod innych działów </param>
         </member>
         <member name="M:Projekt1.DzialHandlowy.ZlecenieZakupu(Projekt1.Produkt,System.Int32)">
             <summary>
@@ -65,6 +111,11 @@
             <param name="ilosc"> Stan magazynowy </param>
             <param name="cena"> Cena </param>
         </member>
+        <member name="T:Projekt1.Miesiecznik">
+            <summary>
+            Klasa Miesięcznika, dziedziczy z Czasopisma
+            </summary>
+        </member>
         <member name="T:Projekt1.Produkt">
             <summary>
             Klasa abstrakcyjna będąca rodzicem dla każdego typu produktu znajdującego się w Wydawnictwie
@@ -77,6 +128,100 @@
             <param name="tytul"> Tytuł produktu </param>
             <param name="ilosc"> Stan magazynowy produktu </param>
             <param name="cena"> Cena produktu </param>
+        </member>
+        <member name="T:Projekt1.Romans">
+            <summary>
+            Klasa Romansu, dziedziczy z Książki
+            </summary>
+        </member>
+        <member name="T:Projekt1.Tygodnik">
+            <summary>
+            Klasa Tygodnika, dziedziczy z Czasopisma
+            </summary>
+        </member>
+        <member name="T:Projekt1.DzialProgramowy">
+            <summary>
+            Klasa działu programowego zajmującego się zawieraniem umów oraz autorami.
+            </summary>
+            <remarks>
+            Zawiera metody do zarządzania autorami oraz ich umowami. Przechowuje listę autorów i umów.
+            </remarks>
+        </member>
+        <member name="M:Projekt1.DzialProgramowy.UsunAutora(Projekt1.Autor)">
+            <summary>
+            Metoda usuwająca autora z listy.
+            </summary>
+            <param name="a">Autor, który ma zostać usunięty z listy.</param>
+        </member>
+        <member name="M:Projekt1.DzialProgramowy.DodajAutora(Projekt1.Autor)">
+            <summary>
+            Metoda dodająca autora do listy.
+            </summary>
+            <param name="a">Autor, który ma zostać dodany do listy.</param>
+        </member>
+        <member name="M:Projekt1.DzialProgramowy.PrzegladAutorow">
+            <summary>
+            Metoda tworząca spis wszystkich autorów wydawnictwa.
+            </summary>
+            <returns>
+            Spis imion i nazwisk wszystkich autorów wydawnictwa.
+            </returns>
+        </member>
+        <member name="M:Projekt1.DzialProgramowy.ZawrzyjUmoweUOD(Projekt1.UOD)">
+            <summary>
+            Metoda dodająca do listy umów umowę o dzieło.
+            </summary>
+            <param name="uod">Obiekt umowy o dzieło.</param>
+        </member>
+        <member name="M:Projekt1.DzialProgramowy.ZawrzyjUmoweUOP(Projekt1.UOP)">
+            <summary>
+            Metoda dodająca do listy umów umowę o pracę.
+            </summary>
+            <param name="uop">Obiekt umowy o pracę.</param>
+        </member>
+        <member name="M:Projekt1.DzialProgramowy.RozwiazUmowe(Projekt1.Umowa)">
+            <summary>
+            Metoda usuwająca z listy umowę.
+            </summary>
+            <param name="u">Obiekt umowy do usunięcia.</param>
+        </member>
+        <member name="M:Projekt1.DzialProgramowy.PrzegladUmow">
+            <summary>
+            Metoda tworząca spis zawartych umów.
+            </summary>
+            <returns>
+            W przypadku umowy o pracę - pensja oraz czas, na który została zawarta umowa. W przypadku umowy o dzieło - pensja oraz pozycja, na którą została zawarta umowa.
+            </returns>
+        </member>
+        <member name="T:Projekt1.Umowa">
+            <summary>
+            Klasa umów zawartych z autorami.
+            </summary>
+            <remarks>
+            Klasa przechowuje obiekt autora, z którym zawarta jest umowa.
+            </remarks>
+        </member>
+        <member name="T:Projekt1.UOD">
+            <summary>
+            Klasa umów o dzieło zawartych z autorami.
+            </summary>
+            <remarks>
+            Klasa przechowuje obiekt książki, na którą autor ma umowę oraz jego pensję. Dziedziczy z umowy.
+            </remarks>
+        </member>
+        <member name="T:Projekt1.UOP">
+            <summary>
+            Klasa zawierająca umowy o pracę zawarte z autorami.
+            </summary>
+            <remarks>
+            Klasa przechowuje pensję autora oraz czas, na który ma zawartą umowę. Zawiera metodę do zlecania autorowi napisania konkretnej pozycji. Dziedziczy z umowy.
+            </remarks>
+        </member>
+        <member name="M:Projekt1.UOP.Zlecenie(Projekt1.Ksiazka)">
+            <summary>
+            Metoda za pomocą której można zlecić autorowi zatrudnionego na umowę o pracę napisanie konkretnej pozycji.
+            </summary>
+            <param name="k">Książka, która została zlecona autorowi.</param>
         </member>
         <member name="T:Projekt1.Wydawnictwo">
             <summary>
@@ -128,18 +273,18 @@
         </member>
         <member name="T:Projekt1.Properties.Resources">
             <summary>
-              Silnie typizowana klasa zasobów do wyszukiwania zlokalizowanych ciągów itd.
+              Klasa zasobu wymagająca zdefiniowania typu do wyszukiwania zlokalizowanych ciągów itd.
             </summary>
         </member>
         <member name="P:Projekt1.Properties.Resources.ResourceManager">
             <summary>
-              Zwraca buforowane wystąpienie składnika ResourceManager używane przez tę klasę.
+            Zwraca buforowane wystąpienie ResourceManager używane przez tę klasę.
             </summary>
         </member>
         <member name="P:Projekt1.Properties.Resources.Culture">
             <summary>
               Przesłania właściwość CurrentUICulture bieżącego wątku dla wszystkich
-              przypadków przeszukiwania zasobów za pomocą tej silnie typizowanej klasy zasobów.
+              przypadków przeszukiwania zasobów za pomocą tej klasy zasobów wymagającej zdefiniowania typu.
             </summary>
         </member>
     </members>

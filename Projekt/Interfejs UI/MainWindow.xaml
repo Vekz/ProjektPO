@@ -13,7 +13,7 @@
         <ComboBox x:Name="lista_ksiazek" Margin="10,56,201,679" IsSynchronizedWithCurrentItem="True"/>
         <TextBox x:Name="ilosc" HorizontalAlignment="Left" Height="21" Margin="10,95,0,0" TextWrapping="NoWrap"
                  VerticalAlignment="Top" Width="209" FontSize="11" FontFamily="Verdana" TextAlignment="Center" UndoLimit="100"
-                 PreviewTextInput="SprawdzanieInputu" Text="Ilość ksiązek do druku/zamówienia." GotFocus="TextBox_GotFocus"/>
+                 PreviewTextInput="SprawdzanieInputu" Text="Ilość produktu do druku/zamówienia." GotFocus="TextBox_GotFocus"/>
         <Button x:Name="Zamawianie" Content="Zamów" Margin="271,56,34,679" Click="Zamawianie_Click"/>
         <Button x:Name="Drukowanie" Content="Druk" Margin="271,95,34,643" Click="Drukowanie_Click"/>
 
@@ -38,7 +38,7 @@
         </ComboBox>
         <TextBox x:Name="cena" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="25" Margin="10,216,0,0" TextWrapping="NoWrap" Text="Podaj cenę" VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu"  TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="tytul" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="24" Margin="10,187,0,0" TextWrapping="NoWrap" Text="Podaj tytuł" VerticalAlignment="Top" Width="179" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
-        <TextBox x:Name="ilosc1" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="24" Margin="10,246,0,0" TextWrapping="NoWrap" Text="Podaj ilość książek" VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
+        <TextBox x:Name="ilosc1" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="24" Margin="10,246,0,0" TextWrapping="NoWrap" Text="Podaj ilość produktu" VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="rok" FontSize="11" FontFamily="Verdana" HorizontalAlignment="Left" Height="25" Margin="10,275,0,0" TextWrapping="NoWrap" Text="Podaj rok wydania" VerticalAlignment="Top" Width="179" UndoLimit="100" PreviewTextInput="SprawdzanieInputu" TextAlignment="Center" GotFocus="TextBox_GotFocus"/>
         <TextBlock HorizontalAlignment="Left" Height="23" Margin="209,306,0,0" TextWrapping="Wrap" Text="Autora wybierz z listy poniżej." VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.48,-0.385"/>
         <Button x:Name="dodawanie_k" Content="Dodaj książkę" HorizontalAlignment="Left" Height="30" Margin="252,211,0,0" VerticalAlignment="Top" Width="106" Click="Dodawanie_k_Click"/>
