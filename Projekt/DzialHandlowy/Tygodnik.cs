@@ -2,6 +2,9 @@
 
 namespace Projekt1
 {
+    /// <summary>
+    /// Klasa Tygodnika, dziedziczy z Czasopisma
+    /// </summary>
     [Serializable]
     class Tygodnik : Czasopismo
     {

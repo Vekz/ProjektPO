@@ -16,7 +16,7 @@ namespace Projekt1
         /// <summary>
         /// Tworzy obiekt Działu Handlowego
         /// </summary>
-        /// <param name="Wyd"> Obiekt rodzica - Wydawnictwa, aby mieć dostęp do metod innych działów </param>
+        /// <param name="Wyd"> Obiekt rodzica - Wydawnictwa <see cref="Wydawnictwo"/>, aby mieć dostęp do metod innych działów </param>
         public DzialHandlowy(Wydawnictwo Wyd)
         {
             _wyd = Wyd;
@@ -25,8 +25,9 @@ namespace Projekt1
         /// <summary>
         /// Zleca zakup produktu wybranego z listy, odejmuje podaną ilość od stanu magazynowego produktu
         /// </summary>
-        /// <param name="P"></param>
-        /// <param name="ilosc"></param>
+        /// <param name="P"> Produkt zamawiany </param>
+        /// <param name="ilosc"> Ilość produktów do usunięcia ze stanu magazynowego </param>
+        /// <exception cref="TooManyException"> Wyrzucone gdy drugi parametr jest większy od stanu magazynowego produktu </exception>
         public void ZlecenieZakupu(Produkt P, int ilosc)
         {
             foreach (Produkt e in produkty)
@@ -45,6 +46,11 @@ namespace Projekt1
             }
         }
 
+        /// <summary>
+        /// Zleca druk produktu wybranego z listy, dodaje podaną ilość do stanu magazynowego produktu
+        /// </summary>
+        /// <param name="P"> Produkt drukowany </param>
+        /// <param name="ilosc"> Ilość produktów do dodania do stanu magazynowego </param>
         public void ZlecenieDruku(Produkt P, int ilosc)
         {
             if (produkty.Contains(P))
@@ -63,6 +69,10 @@ namespace Projekt1
 
         }
 
+        /// <summary>
+        /// Tworzy string zawierający katalog produktów [NIE UŻYWANE W GRAFICZNEJ WERSJI PROGRAMU]
+        /// </summary>
+        /// <returns> String z opisem całej listy produktów </returns>
         public String PokazKatalogProduktów()
         {
             string Katalog = "";
