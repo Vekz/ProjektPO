@@ -7,11 +7,11 @@ using System.Windows;
 // Ogólne informacje o zestawie są kontrolowane poprzez następujący 
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
-[assembly: AssemblyTitle("WYDAWNICTWO")]
+[assembly: AssemblyTitle("Projekt1")]
 [assembly: AssemblyDescription("Zadanie 'Wydawnictwo' na zajęcia z Programowania Obiektowego. Wykonane w zespole: Artur Porowski, Barbara Białostocka, Anita Stasiełuk")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WYDAWNICTWO")]
+[assembly: AssemblyProduct("Projekt1")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
