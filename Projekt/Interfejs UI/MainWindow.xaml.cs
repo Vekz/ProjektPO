@@ -1,31 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Projekt1
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interfejsu i użycie funkcjonalności Wydawnictwa za pomocą interfejsu
     /// </summary>
     public partial class MainWindow : Window
     {
         private Wydawnictwo Wyd = new Wydawnictwo();
 
+        /// <summary>
+        /// Konstruktor głównego okna programu, incicjuje interfejs oraz Wydawnictwo <see cref="Wydawnictwo.Inicjalizacja()"/> i przypisuje ComboBoxy <see cref="Inicjuj()"/>
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -33,20 +25,11 @@ namespace Projekt1
             Inicjuj();
         }
 
+        /// <summary>
+        /// Przypisuje ComboBoxom odpowiadające listy z działów Wydawnictwa
+        /// </summary>
         private void Inicjuj()
         {
-            /*
-            //TU SIĘ ZACZYNA KOD DO TESTÓW DODAJĄCY PRZYKŁADOWEGO AUTORA I KSIĄŻKI
-            Autor Au = new Autor("Artur", "Porowski");
-
-            Wyd.DzH.ZlecenieDruku(new Ksiazka(Au, "Tak i nie", 2019, 0, 30), 250);
-            Wyd.DzH.ZlecenieDruku(new Romans(Au, "Siabdabamba", 2018, 0, 30), 300);
-            
-
-            Wyd.DzP.DodajAutora(Au);
-            //TU SIĘ KOŃCZY TEN KOD| TODO: INTERFEJS DO DODAWANIA AUTORÓW ETC
-            */
-
             lista_ksiazek.ItemsSource = Wyd.DzH.produkty;
             lista_autorow.ItemsSource = Wyd.DzP.autorzy;
             lista_umow.ItemsSource = Wyd.DzP.umowy;
@@ -61,7 +44,15 @@ namespace Projekt1
             else
             {
                 MessageBox.Show("Twoje zamówienie jest przetwarzane, proszę czekać.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
-                Wyd.DzH.ZlecenieZakupu((Produkt)lista_ksiazek.SelectedItem, Convert.ToInt32(ilosc.Text));
+                try
+                {
+                    Wyd.DzH.ZlecenieZakupu((Produkt)lista_ksiazek.SelectedItem, Convert.ToInt32(ilosc.Text));
+                }
+                catch (TooManyException x)
+                {
+                    MessageBox.Show("Proszę zamówić ilość jaka jest na stanie!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
                 lista_ksiazek.Items.Refresh();
                 lista_ksiazek.Items.Refresh();
                 ilosc.Text = "Ilość ksiązek do druku/zamówienia.";

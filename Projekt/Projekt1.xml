@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Projekt1</name>
+    </assembly>
+    <members>
+        <member name="T:Projekt1.DzialHandlowy">
+            <summary>
+            Dział zajmujący się zlecaniem sprzedaży i druku, przetrzymuje listę produktów
+            </summary>
+        </member>
+        <member name="M:Projekt1.DzialHandlowy.#ctor(Projekt1.Wydawnictwo)">
+            <summary>
+            Tworzy obiekt Działu Handlowego
+            </summary>
+            <param name="Wyd"> Obiekt rodzica - Wydawnictwa, aby mieć dostęp do metod innych działów </param>
+        </member>
+        <member name="M:Projekt1.DzialHandlowy.ZlecenieZakupu(Projekt1.Produkt,System.Int32)">
+            <summary>
+            Zleca zakup produktu wybranego z listy, odejmuje podaną ilość od stanu magazynowego produktu
+            </summary>
+            <param name="P"></param>
+            <param name="ilosc"></param>
+        </member>
+        <member name="T:Projekt1.Wydawnictwo">
+            <summary>
+             Głowny obiekt Wydawnictwa, zawierający w sobie wszystkie działy i ich funkcjonalności
+            </summary>
+        </member>
+        <member name="M:Projekt1.Wydawnictwo.Inicjalizacja">
+            <summary>
+            Funkcja służąca do przypisania nowych działów do Wydawnictwa
+            </summary>
+        </member>
+        <member name="T:Projekt1.App">
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Projekt1.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Projekt1.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Projekt1.MainWindow">
+            <summary>
+            Logika interfejsu i użycie funkcjonalności Wydawnictwa za pomocą interfejsu
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.#ctor">
+            <summary>
+            Konstruktor głównego okna programu, incicjuje interfejs oraz Wydawnictwo <see cref="M:Projekt1.Wydawnictwo.Inicjalizacja"/> i przypisuje ComboBoxy <see cref="M:Projekt1.MainWindow.Inicjuj"/>
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.Inicjuj">
+            <summary>
+            Przypisuje ComboBoxom odpowiadające listy z działów Wydawnictwa
+            </summary>
+        </member>
+        <member name="M:Projekt1.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Projekt1.Properties.Resources">
+            <summary>
+              Silnie typizowana klasa zasobów do wyszukiwania zlokalizowanych ciągów itd.
+            </summary>
+        </member>
+        <member name="P:Projekt1.Properties.Resources.ResourceManager">
+            <summary>
+              Zwraca buforowane wystąpienie składnika ResourceManager używane przez tę klasę.
+            </summary>
+        </member>
+        <member name="P:Projekt1.Properties.Resources.Culture">
+            <summary>
+              Przesłania właściwość CurrentUICulture bieżącego wątku dla wszystkich
+              przypadków przeszukiwania zasobów za pomocą tej silnie typizowanej klasy zasobów.
+            </summary>
+        </member>
+    </members>
+</doc>
