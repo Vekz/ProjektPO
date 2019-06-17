@@ -2,6 +2,12 @@
 
 namespace Projekt1
 {
+    /// <summary>
+    /// Klasa autorów wydawnictwa.
+    /// </summary>
+    /// <remarks>
+    /// Klasa przechowuje imię i nazwisko autora.
+    /// </remarks>
     [Serializable]
     class Autor
     {
