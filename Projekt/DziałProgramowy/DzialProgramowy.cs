@@ -3,10 +3,13 @@ using System.Collections.Generic;
 
 namespace Projekt1
 {
-    [Serializable]
     /// <summary>
-    /// Klasa działu programowego. Zawiera metody do zarządzania autorami oraz ich umowami. Przechowuje listę autorów i umów.
+    /// Klasa działu programowego zajmującego się zawieraniem umów oraz autorami.
     /// </summary>
+    /// <remarks>
+    /// Zawiera metody do zarządzania autorami oraz ich umowami. Przechowuje listę autorów i umów.
+    /// </remarks>
+    [Serializable]
     class DzialProgramowy
     {
         public List<Autor> autorzy = new List<Autor>();

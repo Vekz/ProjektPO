@@ -2,13 +2,13 @@
 
 namespace Projekt1
 {
-    [Serializable]
     /// <summary>
     /// Klasa zawierająca umowy o pracę zawarte z autorami.
     /// </summary>
     /// <remarks>
     /// Klasa przechowuje pensję autora oraz czas, na który ma zawartą umowę. Zawiera metodę do zlecania autorowi napisania konkretnej pozycji.
     /// </remarks>
+    [Serializable]
     class UOP : Umowa
     {
         [NonSerialized] private Wydawnictwo _wyd = null;
