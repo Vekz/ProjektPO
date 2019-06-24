@@ -1,4 +1,4 @@
-# ProjektPO
+# Projekt Programowanie Obiektowe
 
 ## Opis:
 Wydawnictwo ePress wydaje pozycje:
