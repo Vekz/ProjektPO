@@ -66,4 +66,4 @@
 # exclude documentation from git linguist statistics
 #
 ###############################################################################
-Dokumentacja/* linguist-documentation
+Dokumentacja/html/* linguist-documentation
